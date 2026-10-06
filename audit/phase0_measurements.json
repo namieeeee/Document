@@ -1,0 +1,1649 @@
+{
+  "commit": "ebaf8369a5bfeba079f2b7ad3c5290bfda925e7b",
+  "date": "2026-10-06T03:14:46.561787+00:00",
+  "url_check_date": "2026-10-06T03:13:22.963298+00:00",
+  "files": [
+    ".gitignore",
+    "00_INDEX.md",
+    "01_FE_BE_ARCHITECTURE.md",
+    "02_FRONTEND_DEEP_DIVE_AND_BUGS.md",
+    "03_BACKEND_DEEP_DIVE_AND_BUGS.md",
+    "04_FE_BE_INTEGRATION_AND_REAL_BUGS.md",
+    "05_EMBEDDED_C_CPP_FOUNDATION.md",
+    "06_MCU_FIRMWARE_RTOS.md",
+    "07_OPERATING_SYSTEMS_ADVANCED.md",
+    "08_DEBUGGING_PLAYBOOK.md",
+    "09_REAL_BUG_CASEBOOK.md",
+    "10_AI_ASSISTED_CODING_AND_DEBUG.md",
+    "AUDIT_GAPS.md",
+    "BUG_THEORY_MAP.md",
+    "CORRECTIONS.md",
+    "EXPANSION_REPORT.md",
+    "README.md",
+    "REFERENCES.md",
+    "SOURCE_INVENTORY.md",
+    "THEORY_COMPLETION_REPORT.md",
+    "THEORY_COVERAGE_MATRIX.md",
+    "THEORY_SOURCE_VERIFICATION.md",
+    "VALIDATION.md",
+    "debug/01_EVIDENCE_METHOD.md",
+    "debug/02_WEB_OBSERVABILITY.md",
+    "debug/03_SYSTEMS_OBSERVABILITY.md",
+    "embedded_systems/01_C_REPRESENTATION.md",
+    "embedded_systems/02_MEMORY_BUILD.md",
+    "embedded_systems/03_CPP_OWNERSHIP.md",
+    "embedded_systems/04_CPU_MCU_EXECUTION.md",
+    "embedded_systems/05_PERIPHERAL_STATE_MACHINES.md",
+    "embedded_systems/06_INTERRUPTS.md",
+    "embedded_systems/07_DMA_OWNERSHIP.md",
+    "embedded_systems/08_CONCURRENCY_BUFFERS.md",
+    "embedded_systems/09_RTOS_SCHEDULER.md",
+    "embedded_systems/10_OS_KERNEL_USERSPACE.md",
+    "embedded_systems/11_BUILD_LINK_STARTUP.md",
+    "embedded_systems/12_CORTEX_M.md",
+    "embedded_systems/13_MMIO_MCU.md",
+    "embedded_systems/14_SERIAL_BUSES.md",
+    "embedded_systems/15_ADC_CAN.md",
+    "embedded_systems/16_REAL_TIME.md",
+    "examples/CoreModels/CoreModels.csproj",
+    "examples/CoreModels/Program.cs",
+    "examples/README.md",
+    "examples/systems_models.py",
+    "examples/web_models.mjs",
+    "foundations/01_DIGITAL_REPRESENTATION.md",
+    "foundations/02_JAVASCRIPT_LANGUAGE.md",
+    "labs/backend/BE-01.md",
+    "labs/backend/BE-02.md",
+    "labs/backend/BE-03.md",
+    "labs/backend/BE-04.md",
+    "labs/backend/BE-05.md",
+    "labs/backend/BE-06.md",
+    "labs/backend/BE-07.md",
+    "labs/backend/BE-08.md",
+    "labs/backend/BE-09.md",
+    "labs/backend/BE-10.md",
+    "labs/backend/BE-11.md",
+    "labs/backend/BE-12.md",
+    "labs/backend/BE-13.md",
+    "labs/backend/BE-14.md",
+    "labs/backend/BE-15.md",
+    "labs/backend/BE-16.md",
+    "labs/backend/BE-17.md",
+    "labs/backend/BE-18.md",
+    "labs/backend/BE-19.md",
+    "labs/backend/BE-20.md",
+    "labs/backend/BE-21.md",
+    "labs/backend/BE-22.md",
+    "labs/backend/BE-23.md",
+    "labs/backend/BE-24.md",
+    "labs/backend/BE-25.md",
+    "labs/backend/BE-26.md",
+    "labs/backend/BE-27.md",
+    "labs/backend/BE-28.md",
+    "labs/backend/BE-29.md",
+    "labs/backend/BE-30.md",
+    "labs/backend/README.md",
+    "labs/embedded_rtos/EMB-01.md",
+    "labs/embedded_rtos/EMB-02.md",
+    "labs/embedded_rtos/EMB-03.md",
+    "labs/embedded_rtos/EMB-04.md",
+    "labs/embedded_rtos/EMB-05.md",
+    "labs/embedded_rtos/EMB-06.md",
+    "labs/embedded_rtos/EMB-07.md",
+    "labs/embedded_rtos/EMB-08.md",
+    "labs/embedded_rtos/EMB-09.md",
+    "labs/embedded_rtos/EMB-10.md",
+    "labs/embedded_rtos/EMB-11.md",
+    "labs/embedded_rtos/EMB-12.md",
+    "labs/embedded_rtos/EMB-13.md",
+    "labs/embedded_rtos/EMB-14.md",
+    "labs/embedded_rtos/EMB-15.md",
+    "labs/embedded_rtos/EMB-16.md",
+    "labs/embedded_rtos/EMB-17.md",
+    "labs/embedded_rtos/EMB-18.md",
+    "labs/embedded_rtos/EMB-19.md",
+    "labs/embedded_rtos/EMB-20.md",
+    "labs/embedded_rtos/EMB-21.md",
+    "labs/embedded_rtos/EMB-22.md",
+    "labs/embedded_rtos/EMB-23.md",
+    "labs/embedded_rtos/EMB-24.md",
+    "labs/embedded_rtos/EMB-25.md",
+    "labs/embedded_rtos/EMB-26.md",
+    "labs/embedded_rtos/EMB-27.md",
+    "labs/embedded_rtos/EMB-28.md",
+    "labs/embedded_rtos/EMB-29.md",
+    "labs/embedded_rtos/EMB-30.md",
+    "labs/embedded_rtos/README.md",
+    "labs/frontend/FE-01.md",
+    "labs/frontend/FE-02.md",
+    "labs/frontend/FE-03.md",
+    "labs/frontend/FE-04.md",
+    "labs/frontend/FE-05.md",
+    "labs/frontend/FE-06.md",
+    "labs/frontend/FE-07.md",
+    "labs/frontend/FE-08.md",
+    "labs/frontend/FE-09.md",
+    "labs/frontend/FE-10.md",
+    "labs/frontend/FE-11.md",
+    "labs/frontend/FE-12.md",
+    "labs/frontend/FE-13.md",
+    "labs/frontend/FE-14.md",
+    "labs/frontend/FE-15.md",
+    "labs/frontend/FE-16.md",
+    "labs/frontend/FE-17.md",
+    "labs/frontend/FE-18.md",
+    "labs/frontend/FE-19.md",
+    "labs/frontend/FE-20.md",
+    "labs/frontend/FE-21.md",
+    "labs/frontend/FE-22.md",
+    "labs/frontend/FE-23.md",
+    "labs/frontend/FE-24.md",
+    "labs/frontend/FE-25.md",
+    "labs/frontend/README.md",
+    "labs/integration/INT-01.md",
+    "labs/integration/INT-02.md",
+    "labs/integration/INT-03.md",
+    "labs/integration/INT-04.md",
+    "labs/integration/INT-05.md",
+    "labs/integration/INT-06.md",
+    "labs/integration/INT-07.md",
+    "labs/integration/INT-08.md",
+    "labs/integration/INT-09.md",
+    "labs/integration/INT-10.md",
+    "labs/integration/INT-11.md",
+    "labs/integration/INT-12.md",
+    "labs/integration/INT-13.md",
+    "labs/integration/INT-14.md",
+    "labs/integration/INT-15.md",
+    "labs/integration/INT-16.md",
+    "labs/integration/INT-17.md",
+    "labs/integration/INT-18.md",
+    "labs/integration/INT-19.md",
+    "labs/integration/INT-20.md",
+    "labs/integration/INT-21.md",
+    "labs/integration/INT-22.md",
+    "labs/integration/INT-23.md",
+    "labs/integration/INT-24.md",
+    "labs/integration/INT-25.md",
+    "labs/integration/README.md",
+    "labs/os/OS-01.md",
+    "labs/os/OS-02.md",
+    "labs/os/OS-03.md",
+    "labs/os/OS-04.md",
+    "labs/os/OS-05.md",
+    "labs/os/OS-06.md",
+    "labs/os/OS-07.md",
+    "labs/os/OS-08.md",
+    "labs/os/OS-09.md",
+    "labs/os/OS-10.md",
+    "labs/os/OS-11.md",
+    "labs/os/README.md",
+    "os/01_KERNEL_PROCESS.md",
+    "os/02_VIRTUAL_MEMORY.md",
+    "os/03_IO_IPC_LIFETIME.md",
+    "os/04_CONCURRENCY.md",
+    "web/01_HTTP_BROWSER.md",
+    "web/02_JS_RUNTIME.md",
+    "web/03_TYPESCRIPT_BOUNDARIES.md",
+    "web/04_REACT_MENTAL_MODEL.md",
+    "web/05_NEXT_EXECUTION.md",
+    "web/06_CSHARP_RUNTIME.md",
+    "web/07_ASPNET_LIFECYCLE.md",
+    "web/08_API_CONTRACTS.md",
+    "web/09_DATABASE_CONCURRENCY.md",
+    "web/10_IDENTITY_SECURITY.md",
+    "web/11_INTEGRATION_FLOW.md",
+    "web/12_HTTP_SEMANTICS.md",
+    "web/13_BROWSER_INTERNALS.md",
+    "web/14_DOTNET_ASYNC_RUNTIME.md",
+    "web/15_DATABASE_TRANSACTIONS.md"
+  ],
+  "self_checks": {
+    "00_INDEX.md": 0,
+    "01_FE_BE_ARCHITECTURE.md": 4,
+    "02_FRONTEND_DEEP_DIVE_AND_BUGS.md": 0,
+    "03_BACKEND_DEEP_DIVE_AND_BUGS.md": 5,
+    "04_FE_BE_INTEGRATION_AND_REAL_BUGS.md": 0,
+    "05_EMBEDDED_C_CPP_FOUNDATION.md": 0,
+    "06_MCU_FIRMWARE_RTOS.md": 0,
+    "07_OPERATING_SYSTEMS_ADVANCED.md": 5,
+    "08_DEBUGGING_PLAYBOOK.md": 0,
+    "09_REAL_BUG_CASEBOOK.md": 0,
+    "10_AI_ASSISTED_CODING_AND_DEBUG.md": 0,
+    "AUDIT_GAPS.md": 0,
+    "BUG_THEORY_MAP.md": 0,
+    "CORRECTIONS.md": 0,
+    "EXPANSION_REPORT.md": 0,
+    "README.md": 0,
+    "REFERENCES.md": 0,
+    "SOURCE_INVENTORY.md": 0,
+    "THEORY_COMPLETION_REPORT.md": 0,
+    "THEORY_COVERAGE_MATRIX.md": 0,
+    "THEORY_SOURCE_VERIFICATION.md": 0,
+    "VALIDATION.md": 0,
+    "debug/01_EVIDENCE_METHOD.md": 6,
+    "debug/02_WEB_OBSERVABILITY.md": 5,
+    "debug/03_SYSTEMS_OBSERVABILITY.md": 6,
+    "embedded_systems/01_C_REPRESENTATION.md": 5,
+    "embedded_systems/02_MEMORY_BUILD.md": 5,
+    "embedded_systems/03_CPP_OWNERSHIP.md": 6,
+    "embedded_systems/04_CPU_MCU_EXECUTION.md": 5,
+    "embedded_systems/05_PERIPHERAL_STATE_MACHINES.md": 5,
+    "embedded_systems/06_INTERRUPTS.md": 6,
+    "embedded_systems/07_DMA_OWNERSHIP.md": 5,
+    "embedded_systems/08_CONCURRENCY_BUFFERS.md": 5,
+    "embedded_systems/09_RTOS_SCHEDULER.md": 6,
+    "embedded_systems/10_OS_KERNEL_USERSPACE.md": 0,
+    "embedded_systems/11_BUILD_LINK_STARTUP.md": 5,
+    "embedded_systems/12_CORTEX_M.md": 5,
+    "embedded_systems/13_MMIO_MCU.md": 5,
+    "embedded_systems/14_SERIAL_BUSES.md": 5,
+    "embedded_systems/15_ADC_CAN.md": 5,
+    "embedded_systems/16_REAL_TIME.md": 5,
+    "examples/README.md": 0,
+    "foundations/01_DIGITAL_REPRESENTATION.md": 5,
+    "foundations/02_JAVASCRIPT_LANGUAGE.md": 6,
+    "labs/backend/BE-01.md": 0,
+    "labs/backend/BE-02.md": 0,
+    "labs/backend/BE-03.md": 0,
+    "labs/backend/BE-04.md": 0,
+    "labs/backend/BE-05.md": 0,
+    "labs/backend/BE-06.md": 0,
+    "labs/backend/BE-07.md": 0,
+    "labs/backend/BE-08.md": 0,
+    "labs/backend/BE-09.md": 0,
+    "labs/backend/BE-10.md": 0,
+    "labs/backend/BE-11.md": 0,
+    "labs/backend/BE-12.md": 0,
+    "labs/backend/BE-13.md": 0,
+    "labs/backend/BE-14.md": 0,
+    "labs/backend/BE-15.md": 0,
+    "labs/backend/BE-16.md": 0,
+    "labs/backend/BE-17.md": 0,
+    "labs/backend/BE-18.md": 0,
+    "labs/backend/BE-19.md": 0,
+    "labs/backend/BE-20.md": 0,
+    "labs/backend/BE-21.md": 0,
+    "labs/backend/BE-22.md": 0,
+    "labs/backend/BE-23.md": 0,
+    "labs/backend/BE-24.md": 0,
+    "labs/backend/BE-25.md": 0,
+    "labs/backend/BE-26.md": 0,
+    "labs/backend/BE-27.md": 0,
+    "labs/backend/BE-28.md": 0,
+    "labs/backend/BE-29.md": 0,
+    "labs/backend/BE-30.md": 0,
+    "labs/backend/README.md": 0,
+    "labs/embedded_rtos/EMB-01.md": 0,
+    "labs/embedded_rtos/EMB-02.md": 0,
+    "labs/embedded_rtos/EMB-03.md": 0,
+    "labs/embedded_rtos/EMB-04.md": 0,
+    "labs/embedded_rtos/EMB-05.md": 0,
+    "labs/embedded_rtos/EMB-06.md": 0,
+    "labs/embedded_rtos/EMB-07.md": 0,
+    "labs/embedded_rtos/EMB-08.md": 0,
+    "labs/embedded_rtos/EMB-09.md": 0,
+    "labs/embedded_rtos/EMB-10.md": 0,
+    "labs/embedded_rtos/EMB-11.md": 0,
+    "labs/embedded_rtos/EMB-12.md": 0,
+    "labs/embedded_rtos/EMB-13.md": 0,
+    "labs/embedded_rtos/EMB-14.md": 0,
+    "labs/embedded_rtos/EMB-15.md": 0,
+    "labs/embedded_rtos/EMB-16.md": 0,
+    "labs/embedded_rtos/EMB-17.md": 0,
+    "labs/embedded_rtos/EMB-18.md": 0,
+    "labs/embedded_rtos/EMB-19.md": 0,
+    "labs/embedded_rtos/EMB-20.md": 0,
+    "labs/embedded_rtos/EMB-21.md": 0,
+    "labs/embedded_rtos/EMB-22.md": 0,
+    "labs/embedded_rtos/EMB-23.md": 0,
+    "labs/embedded_rtos/EMB-24.md": 0,
+    "labs/embedded_rtos/EMB-25.md": 0,
+    "labs/embedded_rtos/EMB-26.md": 0,
+    "labs/embedded_rtos/EMB-27.md": 0,
+    "labs/embedded_rtos/EMB-28.md": 0,
+    "labs/embedded_rtos/EMB-29.md": 0,
+    "labs/embedded_rtos/EMB-30.md": 0,
+    "labs/embedded_rtos/README.md": 0,
+    "labs/frontend/FE-01.md": 0,
+    "labs/frontend/FE-02.md": 0,
+    "labs/frontend/FE-03.md": 0,
+    "labs/frontend/FE-04.md": 0,
+    "labs/frontend/FE-05.md": 0,
+    "labs/frontend/FE-06.md": 0,
+    "labs/frontend/FE-07.md": 0,
+    "labs/frontend/FE-08.md": 0,
+    "labs/frontend/FE-09.md": 0,
+    "labs/frontend/FE-10.md": 0,
+    "labs/frontend/FE-11.md": 0,
+    "labs/frontend/FE-12.md": 0,
+    "labs/frontend/FE-13.md": 0,
+    "labs/frontend/FE-14.md": 0,
+    "labs/frontend/FE-15.md": 0,
+    "labs/frontend/FE-16.md": 0,
+    "labs/frontend/FE-17.md": 0,
+    "labs/frontend/FE-18.md": 0,
+    "labs/frontend/FE-19.md": 0,
+    "labs/frontend/FE-20.md": 0,
+    "labs/frontend/FE-21.md": 0,
+    "labs/frontend/FE-22.md": 0,
+    "labs/frontend/FE-23.md": 0,
+    "labs/frontend/FE-24.md": 0,
+    "labs/frontend/FE-25.md": 0,
+    "labs/frontend/README.md": 0,
+    "labs/integration/INT-01.md": 0,
+    "labs/integration/INT-02.md": 0,
+    "labs/integration/INT-03.md": 0,
+    "labs/integration/INT-04.md": 0,
+    "labs/integration/INT-05.md": 0,
+    "labs/integration/INT-06.md": 0,
+    "labs/integration/INT-07.md": 0,
+    "labs/integration/INT-08.md": 0,
+    "labs/integration/INT-09.md": 0,
+    "labs/integration/INT-10.md": 0,
+    "labs/integration/INT-11.md": 0,
+    "labs/integration/INT-12.md": 0,
+    "labs/integration/INT-13.md": 0,
+    "labs/integration/INT-14.md": 0,
+    "labs/integration/INT-15.md": 0,
+    "labs/integration/INT-16.md": 0,
+    "labs/integration/INT-17.md": 0,
+    "labs/integration/INT-18.md": 0,
+    "labs/integration/INT-19.md": 0,
+    "labs/integration/INT-20.md": 0,
+    "labs/integration/INT-21.md": 0,
+    "labs/integration/INT-22.md": 0,
+    "labs/integration/INT-23.md": 0,
+    "labs/integration/INT-24.md": 0,
+    "labs/integration/INT-25.md": 0,
+    "labs/integration/README.md": 0,
+    "labs/os/OS-01.md": 0,
+    "labs/os/OS-02.md": 0,
+    "labs/os/OS-03.md": 0,
+    "labs/os/OS-04.md": 0,
+    "labs/os/OS-05.md": 0,
+    "labs/os/OS-06.md": 0,
+    "labs/os/OS-07.md": 0,
+    "labs/os/OS-08.md": 0,
+    "labs/os/OS-09.md": 0,
+    "labs/os/OS-10.md": 0,
+    "labs/os/OS-11.md": 0,
+    "labs/os/README.md": 0,
+    "os/01_KERNEL_PROCESS.md": 5,
+    "os/02_VIRTUAL_MEMORY.md": 6,
+    "os/03_IO_IPC_LIFETIME.md": 6,
+    "os/04_CONCURRENCY.md": 6,
+    "web/01_HTTP_BROWSER.md": 5,
+    "web/02_JS_RUNTIME.md": 6,
+    "web/03_TYPESCRIPT_BOUNDARIES.md": 6,
+    "web/04_REACT_MENTAL_MODEL.md": 7,
+    "web/05_NEXT_EXECUTION.md": 6,
+    "web/06_CSHARP_RUNTIME.md": 6,
+    "web/07_ASPNET_LIFECYCLE.md": 5,
+    "web/08_API_CONTRACTS.md": 5,
+    "web/09_DATABASE_CONCURRENCY.md": 5,
+    "web/10_IDENTITY_SECURITY.md": 6,
+    "web/11_INTEGRATION_FLOW.md": 5,
+    "web/12_HTTP_SEMANTICS.md": 6,
+    "web/13_BROWSER_INTERNALS.md": 6,
+    "web/14_DOTNET_ASYNC_RUNTIME.md": 6,
+    "web/15_DATABASE_TRANSACTIONS.md": 6
+  },
+  "external": [
+    {
+      "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+      "status": 200,
+      "final_url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+      "sample_sha256": "ac00589e1bb28f4977b3c82dfb61713b7aac0cbd07b15bd40d8516ef86379524",
+      "sample_bytes": 34156
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__Core__Register__gr.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__Core__Register__gr.html",
+      "sample_sha256": "257d6dbcd2948451afd707eb8c0d49058da202939af3a417c1e37083ccc24e86",
+      "sample_bytes": 77649
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__Dcache__functions__m7.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__Dcache__functions__m7.html",
+      "sample_sha256": "07337ee2731f802a9dd686e7c02fe5fe2668fc54d91117529893fabc0c43abdb",
+      "sample_bytes": 21493
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__NVIC__gr.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__NVIC__gr.html",
+      "sample_sha256": "705d2af93e5b6412acb4620980b8c1b747a89a71c782fa32a299c4f58a2432d6",
+      "sample_bytes": 87470
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/latest/Core/index.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/latest/Core/index.html",
+      "sample_sha256": "2f91cb08e6c0772997beea6535c0295b6e5ef619cdde1b5148afd89283b66cd9",
+      "sample_bytes": 14491
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/latest/Core/startup_c_pg.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/latest/Core/startup_c_pg.html",
+      "sample_sha256": "f2e483ab5e967b0e41108f4963b27046a08727d83a714c71a5ae145c1f6f34e7",
+      "sample_bytes": 23033
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/group__Core__Register__gr.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/group__Core__Register__gr.html",
+      "sample_sha256": "18fd22e89c118d941e0c020805c4c7e6ba8c06747a059086307a6ace0c1a3e9c",
+      "sample_bytes": 77649
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/group__NVIC__gr.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/group__NVIC__gr.html",
+      "sample_sha256": "c1d0e13025dfa071611d712f387734d0b6866297db97a4eff2a8bb4d79dba61d",
+      "sample_bytes": 87470
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/index.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/index.html",
+      "sample_sha256": "495bfd82ffbd33503d04f2635fd463417ab0e92c28058f7b32a614785f17429d",
+      "sample_bytes": 14198
+    },
+    {
+      "url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/startup_c_pg.html",
+      "status": 200,
+      "final_url": "https://arm-software.github.io/CMSIS_6/v6.0.0/Core/startup_c_pg.html",
+      "sample_sha256": "c51e9ae6c8f764cb7a09d7e643ffe64b4ac30c0d000fa5a307686d5064fc81b1",
+      "sample_bytes": 23033
+    },
+    {
+      "url": "https://arxiv.org/pdf/2210.11185",
+      "status": "UNVERIFIED_NETWORK",
+      "detail": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "sample_sha256": "d9f7e34eede44d2e143f440090d06ef397e0416ddfd312e92d800481faa9fc36",
+      "sample_bytes": 172652
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+      "status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+      "sample_sha256": "dd06c2a81415150a28ef1742903754f668b103f98075ca8db76d01e0560067f7",
+      "sample_bytes": 117207
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "sample_sha256": "b38016cb5467281f48ee48674b64f4d850b9f6b80b18999c0c1a873ee04b67b7",
+      "sample_bytes": 96018
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+      "status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+      "sample_sha256": "396db195affc3f0be5f6b0becdb233b3f5dc26d0047f9d720160299685888428",
+      "sample_bytes": 107282
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "sample_sha256": "9a41b1f652967db72891f700de671e120d60c17add096a0bd5b8894ecced643f",
+      "sample_bytes": 157308
+    },
+    {
+      "url": "https://clang.llvm.org/docs/AddressSanitizer.html",
+      "status": 200,
+      "final_url": "https://clang.llvm.org/docs/AddressSanitizer.html",
+      "sample_sha256": "3e8ff9c993452dd48f1c2ccc91395d8747b067f4b02a703714e508cbec06b328",
+      "sample_bytes": 78037
+    },
+    {
+      "url": "https://clang.llvm.org/docs/ThreadSanitizer.html",
+      "status": 200,
+      "final_url": "https://clang.llvm.org/docs/ThreadSanitizer.html",
+      "sample_sha256": "d8c8a3ff70a4016cf2c9d7fa16b91d5b4b4bcc334f780892b90b728ce0a33d61",
+      "sample_bytes": 73407
+    },
+    {
+      "url": "https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html",
+      "status": 200,
+      "final_url": "https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html",
+      "sample_sha256": "600a3447877132923db0f804c3779b9ffe85f4f1d5ccca670342a2f86f635cb8",
+      "sample_bytes": 84045
+    },
+    {
+      "url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/integers-int/int32-c/",
+      "status": 200,
+      "final_url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/integers-int/int32-c/",
+      "sample_sha256": "0ed2d27033502f16ef48847920d44e745d11d47cfb8e999361816dd1089f41e2",
+      "sample_bytes": 352150
+    },
+    {
+      "url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/integers-int/int34-c/",
+      "status": 200,
+      "final_url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/integers-int/int34-c/",
+      "sample_sha256": "6ac183d019290908ee8f8462e29a70e44e9ac9c374b8ff7ef1eeafca1ea96366",
+      "sample_bytes": 275683
+    },
+    {
+      "url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/memory-management-mem/mem30-c/",
+      "status": 200,
+      "final_url": "https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/rules/memory-management-mem/mem30-c/",
+      "sample_sha256": "fb40ba255c76c7f4f38898227284906aa8446001ef3f8aa7728ff711cdbee62f",
+      "sample_bytes": 287927
+    },
+    {
+      "url": "https://developer.chrome.com/docs/devtools/console",
+      "status": 200,
+      "final_url": "https://developer.chrome.com/docs/devtools/console",
+      "sample_sha256": "7c8e997e1bc188b771c352688db0950e2a624cb86d4475862d63185b22de1384",
+      "sample_bytes": 194694
+    },
+    {
+      "url": "https://developer.chrome.com/docs/devtools/network",
+      "status": 200,
+      "final_url": "https://developer.chrome.com/docs/devtools/network",
+      "sample_sha256": "16151698555d649654e3128e6c3a30baf0af1ef3cd2890bef58078eb0b14ee58",
+      "sample_bytes": 240690
+    },
+    {
+      "url": "https://developer.chrome.com/docs/devtools/performance",
+      "status": 200,
+      "final_url": "https://developer.chrome.com/docs/devtools/performance",
+      "sample_sha256": "9e9a65a00df873f860b4b4cb6f9e598ce45b8140328955145d3da5ee814b637f",
+      "sample_bytes": 218022
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL",
+      "sample_sha256": "d95a1121c9282eddf6c25841edbca7c15a64a0e8c985b06c7eb378c6ca5aea4a",
+      "sample_bytes": 167692
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide",
+      "sample_sha256": "5d66ffa14f8616d27851d5e76b9a4362267323f6ee62221eb6a2406049508b90",
+      "sample_bytes": 180228
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+      "sample_sha256": "ca687c842239774bd4def380b268baa62af5d4d4297dc432597f20fa41e01b28",
+      "sample_bytes": 155461
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API",
+      "sample_sha256": "62f1ee29f2fe6aaacf504fa63cb03ff2e7461757bb3c0726e6b7a9d4e9b9b051",
+      "sample_bytes": 156301
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing",
+      "sample_sha256": "372d7462e8121785ded97bce561841ae0413cbaa34212c4bbe8e3dd3d0611f11",
+      "sample_bytes": 333879
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+      "sample_sha256": "739986b8f8b6262a50cbdfe429bcea73e8d97d3e7fb7f46296bed29f39fd5838",
+      "sample_bytes": 195330
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+      "sample_sha256": "99e3067b2aa38d18e26fbcb79d1d4b85570c3af4e331d8253c2053a2f4b8f88d",
+      "sample_bytes": 259401
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+      "sample_sha256": "f33a167dfb352a1a6879836cfe5c3adfd9967718552c8fe4b3a6df858c72fe14",
+      "sample_bytes": 260974
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "sample_sha256": "8a37e66dc02b7fd102e8f95d018facade19aad2a9a69baec04f3f5092cd7dcef",
+      "sample_bytes": 228643
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+      "sample_sha256": "1a0caa244ca7aae75cabccb93c7aeac62c50a8ccdd3226b32b4ae8f5a2dbc2e4",
+      "sample_bytes": 222416
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management",
+      "sample_sha256": "94bc4f754e489582a2d3a7a86358d7ec45d1feee6cfc32462ba925398b5ed998",
+      "sample_bytes": 217159
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model",
+      "sample_sha256": "0dd6744fd1f4be4c5ffa32556c9b6945ac50e584a9e7ee39957d321a2569f3e2",
+      "sample_bytes": 223544
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "sample_sha256": "b8c070ca77fd0a0d1e555abbcefe5c7c7b51dfbbba65f296fad4979b0250eb33",
+      "sample_bytes": 209611
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "sample_sha256": "f1a699245a3e33865b8b0c33ab6f3faa9c96b87dc0e7a9b0258bf9ccd189f672",
+      "sample_bytes": 181370
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+      "sample_sha256": "fb6b8e14ba45146ba18191ad5f2420223cb6888c62d490a95af2f743ac0e5449",
+      "sample_bytes": 235214
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+      "sample_sha256": "91478f9f0646a4c3ad6f598b9bb0c1c8f2e8455c4fdd97575daae8aae5b66033",
+      "sample_bytes": 216189
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Critical_rendering_path",
+      "status": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Critical_rendering_path",
+      "sample_sha256": "5e34e444f480f9f8cfc2ef4e045f69794415d019b8ba753bd71af29673945fc0",
+      "sample_bytes": 156378
+    },
+    {
+      "url": "https://docs.freertos.org/",
+      "status": 200,
+      "final_url": "https://docs.freertos.org/",
+      "sample_sha256": "c10f32b296ab5116a242c72165abb19896b580650944fb2599c4aa8be46c50aa",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://docs.kernel.org/locking/mutex-design.html",
+      "status": 200,
+      "final_url": "https://docs.kernel.org/locking/mutex-design.html",
+      "sample_sha256": "788860650042050058d8dfb68e630779cb65c86c7eb6f48aa978961b86c9d8c8",
+      "sample_bytes": 21587
+    },
+    {
+      "url": "https://docs.python.org/3.11/library/tracemalloc.html",
+      "status": 200,
+      "final_url": "https://docs.python.org/3.11/library/tracemalloc.html",
+      "sample_sha256": "ee43c7c95c9ec7467e8b8d86e6796ab3e6a0091bb3ae1c95789838949d96e105",
+      "sample_bytes": 127340
+    },
+    {
+      "url": "https://docs.zephyrproject.org/3.7.0/kernel/services/data_passing/message_queues.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/3.7.0/kernel/services/data_passing/message_queues.html",
+      "sample_sha256": "564ace7d1d74e70fe0a5cc5e302f19caf388635096cf2689d007d7452caebe29",
+      "sample_bytes": 67051
+    },
+    {
+      "url": "https://docs.zephyrproject.org/3.7.0/kernel/services/scheduling/index.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/3.7.0/kernel/services/scheduling/index.html",
+      "sample_sha256": "cbb585371897bc9e8583d9da0f4945548d7ebbc877db78a29f2bb328a1595b2b",
+      "sample_bytes": 50868
+    },
+    {
+      "url": "https://docs.zephyrproject.org/3.7.0/kernel/services/synchronization/mutexes.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/3.7.0/kernel/services/synchronization/mutexes.html",
+      "sample_sha256": "af3d4343d360a7fc7207d8b6558e8c381916c7e5817ed16c3f63154bf9683c50",
+      "sample_bytes": 54151
+    },
+    {
+      "url": "https://docs.zephyrproject.org/3.7.0/kernel/services/timing/timers.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/3.7.0/kernel/services/timing/timers.html",
+      "sample_sha256": "d61d85fdd028e3937070356da9fc3ceae454ef4446347f57bf54dfedca08f807",
+      "sample_bytes": 57715
+    },
+    {
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html",
+      "sample_sha256": "5077cc814174c8bc938791d83d8302eeffb7b78d6fb76478506d375dccaa1b3d",
+      "sample_bytes": 42269
+    },
+    {
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html",
+      "sample_sha256": "bee3bc82564b4eef5b04610774d56cf2aee5f4dd2fb9ee02d362fa4c5cd89a9e",
+      "sample_bytes": 59543
+    },
+    {
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/synchronization/mutexes.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/latest/kernel/services/synchronization/mutexes.html",
+      "sample_sha256": "c5555707b17652c493443fbd46cc32586f4b565a5a88e4071e1707453a7db4b7",
+      "sample_bytes": 39662
+    },
+    {
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/threads/index.html",
+      "status": 200,
+      "final_url": "https://docs.zephyrproject.org/latest/kernel/services/threads/index.html",
+      "sample_sha256": "606bf16e76cc05fd7829fc0235c8061b841baf06c98aea2ff5db9588083a09c6",
+      "sample_bytes": 99949
+    },
+    {
+      "url": "https://dom.spec.whatwg.org/#concept-event-dispatch",
+      "status": 200,
+      "final_url": "https://dom.spec.whatwg.org/#concept-event-dispatch",
+      "sample_sha256": "89d82eeede367a30b435cff05576dc7410574694f4684a1866ad731a41fa69f8",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://eel.is/c++draft/basic.life",
+      "status": 200,
+      "final_url": "https://eel.is/c++draft/basic.life",
+      "sample_sha256": "1b9da2cb5a7738f5df9d6a7a2e5355a996ed0390f5d1a61118f9106be67764f2",
+      "sample_bytes": 45169
+    },
+    {
+      "url": "https://eel.is/c++draft/expr.delete",
+      "status": 200,
+      "final_url": "https://eel.is/c++draft/expr.delete",
+      "sample_sha256": "77eeac0089293dc4f667a7f7ac1bee20a66e3f46009a228a710966a256406476",
+      "sample_bytes": 36715
+    },
+    {
+      "url": "https://eel.is/c++draft/intro.races",
+      "status": 200,
+      "final_url": "https://eel.is/c++draft/intro.races",
+      "sample_sha256": "781e3cefb05633c15207fcd90e1ef89b78d0fc8e9fb82d7a187f0043a1d2b437",
+      "sample_bytes": 38893
+    },
+    {
+      "url": "https://eel.is/c++draft/vector.capacity",
+      "status": 200,
+      "final_url": "https://eel.is/c++draft/vector.capacity",
+      "sample_sha256": "2323bfc6075e8e359386a2bd771c2dff995e1f06c75474840fda1aa391c50d34",
+      "sample_bytes": 20476
+    },
+    {
+      "url": "https://fetch.spec.whatwg.org/",
+      "status": 200,
+      "final_url": "https://fetch.spec.whatwg.org/",
+      "sample_sha256": "9ddb327aec96c9a593a36da7458eb9102b220d4b8d6b726c79c7c4ee1e515e6e",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html",
+      "status": 200,
+      "final_url": "https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html",
+      "sample_sha256": "793355f0a51722fa99ed627b6ae1869d0032df98e6e74ff3eacf48c891f2dfae",
+      "sample_bytes": 216303
+    },
+    {
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html",
+      "status": 200,
+      "final_url": "https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html",
+      "sample_sha256": "84e27e41f6745889fc3c98a0a03cf24c6f80409f52214b482c927d072b17e630",
+      "sample_bytes": 48577
+    },
+    {
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html",
+      "status": 200,
+      "final_url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html",
+      "sample_sha256": "672ebb29d8c514f0595a596965a2448ace631c06942d0196fee9c0a88fc7c1b9",
+      "sample_bytes": 7064
+    },
+    {
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html",
+      "status": 200,
+      "final_url": "https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html",
+      "sample_sha256": "622a0e2a50c3ff9b5c513fad4458d2915cd9819f9db31a0ff51de689a1bb83d3",
+      "sample_bytes": 294223
+    },
+    {
+      "url": "https://github.com/ARM-software/abi-aa/blob/main/aapcs32/aapcs32.rst",
+      "status": 200,
+      "final_url": "https://github.com/ARM-software/abi-aa/blob/main/aapcs32/aapcs32.rst",
+      "sample_sha256": "8e9cb56ce98cc69485eb9f8f9789605d75b21b21c050413b01fb37aa10aba72f",
+      "sample_bytes": 891335
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/",
+      "status": 200,
+      "final_url": "https://html.spec.whatwg.org/multipage/",
+      "sample_sha256": "36e3f6f9f0489446d8f9fdcb915d0e73d340b1d67c891a6f7c165df07e176105",
+      "sample_bytes": 154859
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/webappapis.html#event-loops",
+      "status": 200,
+      "final_url": "https://html.spec.whatwg.org/multipage/webappapis.html#event-loops",
+      "sample_sha256": "3b7ba51d763c6fe4c42c1d97e856b0dc60d205b3b1953b790d299390a0d4761d",
+      "sample_bytes": 806519
+    },
+    {
+      "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii",
+      "status": 200,
+      "final_url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii",
+      "sample_sha256": "d29b3e47be5bb73b48a6ac41b9d46d7a48f547318f157c07db8bfe50e3e84324",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-8.0",
+      "sample_sha256": "28ccdce25e7189d149269fc860f0003d4001aad38402957e9114051892f6e323",
+      "sample_bytes": 136055
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0",
+      "sample_sha256": "403a38cf0644c62c825146e43dc6b2c4de1dce35dd3ebdd45d21ed769fdf0054",
+      "sample_bytes": 111955
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-8.0",
+      "sample_sha256": "50b2f0a62b89ad38ab729cb3c81214da8738a540fb9f5a4f1390fe528799d16a",
+      "sample_bytes": 343237
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0",
+      "sample_sha256": "dc1702f7b7138069580263299fd1f2fce814fb590e1204d05ad05d6db11e7c42",
+      "sample_bytes": 157054
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0",
+      "sample_sha256": "7054d8b4ed04e12e290146d678fb3bb54da9e984b6c0e7531ac0696c0f0ba4e2",
+      "sample_bytes": 262333
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+      "sample_sha256": "740b125d09398d10d9023b96c31f438f04c67946b3d7aed5339030b8e78805b5",
+      "sample_bytes": 191228
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication?view=aspnetcore-10.0",
+      "sample_sha256": "7384411281d98dfc425a1eecf4775cd57805e253956fd6262b02a84246d69c9c",
+      "sample_bytes": 79196
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-5.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/aspnet/core/security/authorization/resource-based?view=aspnetcore-5.0",
+      "sample_sha256": "52a776a5a39b39b439142cc4602612d45903fbd7514ff93911a91affaaf6870a",
+      "sample_bytes": 67692
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "sample_sha256": "a435bdccfe022e13fa486fea1a6ef07f92b976cd20bd77e62db45bc0b9ab49e3",
+      "sample_bytes": 102156
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/",
+      "sample_sha256": "f5d17ee08d035f7ea43d22594e1507b1ad44c877fee1743cb2be366954eda718",
+      "sample_bytes": 58418
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-threadpool-starvation",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-threadpool-starvation",
+      "sample_sha256": "bdc9576c0a42ad7702d3fcf35bd60e9d8e2d0e4d85c6fe16bc7b985fa002584c",
+      "sample_bytes": 82778
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/",
+      "sample_sha256": "634c4b07dd90073caf1b01a5b3fe70667ad823ba90c025828fc791cf1bb7f514",
+      "sample_bytes": 87599
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types",
+      "sample_sha256": "addb98892be42d34bcd140be16614e7a82b036b36eae93c870364679760d30f3",
+      "sample_bytes": 56712
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/types",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/types",
+      "sample_sha256": "c5419a1f1f620de83a36176471141d2f84e30a4923192d2773877e8a50d3ea28",
+      "sample_bytes": 152038
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/null-safety/nullable-reference-types",
+      "sample_sha256": "76a1c953672d4f8be26d52cecb2e6d794d558a07b9813912fb897b5082a4ef3d",
+      "sample_bytes": 64719
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing",
+      "sample_sha256": "87bf6d7ec7b513a70f32264b1611c63396b35deac10f64b5e520ab3ab45d5c19",
+      "sample_bytes": 60080
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals",
+      "sample_sha256": "cfaeb6d4209c85a87b40fef8a22c05b50d9942943fe046831e93e88d0de63aed",
+      "sample_bytes": 72238
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose",
+      "sample_sha256": "43c55b0395a6852ff38532b8736e8a1618575125b808bacc501f2c1f076f5eba",
+      "sample_bytes": 92026
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/managed-execution-process",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/standard/managed-execution-process",
+      "sample_sha256": "3e16aca1d6a76655585a0ce4fddf35de3637735ed12118c485f73cad2236a1b1",
+      "sample_bytes": 60815
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads",
+      "sample_sha256": "969a8946b5670d69d137a1bf8bf60337bdcbe7488833f07bf2cfa62a88d5adba",
+      "sample_bytes": 85097
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool",
+      "sample_sha256": "3aaded25f06eb02d687b25d4387fc7cc57b1c1afeaac6a880e8269cf2645c8f8",
+      "sample_bytes": 61004
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/close.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/close.2.html",
+      "sample_sha256": "20eea30e262be7d46294160b5ddbc90048e8185a4766276b15119365207d64c3",
+      "sample_bytes": 18845
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/fsync.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/fsync.2.html",
+      "sample_sha256": "f0a986d21500222ecb69580fc7a910f346c6b1ff1005ca515501fb05bb5d91f5",
+      "sample_bytes": 15152
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/intro.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/intro.2.html",
+      "sample_sha256": "5bc539e1d313106ae454bd4cfce94ec65aced23367e3e926538bc6ab529606f1",
+      "sample_bytes": 12204
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/mmap.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/mmap.2.html",
+      "sample_sha256": "86675e35754bc15ac0f392afa4a9fe806b7cfa0770b4df2d04092a084b7774df",
+      "sample_bytes": 48160
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/open.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/open.2.html",
+      "sample_sha256": "d665489cadb85624d98fae03a8d8d06209030f32735cff8aeba949ad8491c789",
+      "sample_bytes": 76506
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/wait.2.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man2/wait.2.html",
+      "sample_sha256": "fe247c4fc91a2dafd978157a46fa2a91fa48b902e643d852e8352d78c4b32fd3",
+      "sample_bytes": 31979
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man3/pthread_cond_wait.3.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man3/pthread_cond_wait.3.html",
+      "sample_sha256": "57bfcf75da59dfc4ec413845ff608acb05fcaf00f47a34ecd6eeb021d1756a34",
+      "sample_bytes": 17901
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man5/proc_pid_maps.5.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man5/proc_pid_maps.5.html",
+      "sample_sha256": "3a33949653ca5132a368ed40d74b8e56ea4a8bb6b8f364fe615ddfd994d0be18",
+      "sample_bytes": 11702
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/pipe.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/pipe.7.html",
+      "sample_sha256": "22809fe16836722f0359b10b59b4c0971cf3edf6ffb26528c41bd1a383f2a58e",
+      "sample_bytes": 21870
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/pthreads.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/pthreads.7.html",
+      "sample_sha256": "0eb05dc85672136493695bb5b8844cd542bf955d7806c1faca8d3eb8fe92dd10",
+      "sample_bytes": 39488
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/sched.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/sched.7.html",
+      "sample_sha256": "3b52e0157557b7854f013eb13cee0ecdeacddc7f5f27c9e155dbbddc85786814",
+      "sample_bytes": 49011
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/signal-safety.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/signal-safety.7.html",
+      "sample_sha256": "83ba5f615053a9401d9fae88ceb725b18c52042363b825b801912c2124d11c6c",
+      "sample_bytes": 26034
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/signal.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/signal.7.html",
+      "sample_sha256": "6ab11c524ae2c90beb2dc121ce345e2b54fcca2c008e96672e73e0e933f538db",
+      "sample_bytes": 56519
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/socket.7.html",
+      "status": 200,
+      "final_url": "https://man7.org/linux/man-pages/man7/socket.7.html",
+      "sample_sha256": "c31707f7ccd22ee09914702710fa7b03e190bd81fa99a21702731512632cae10",
+      "sample_bytes": 54347
+    },
+    {
+      "url": "https://nextjs.org/blog/next-15",
+      "status": 200,
+      "final_url": "https://nextjs.org/blog/next-15",
+      "sample_sha256": "1de397ba127b1c08d14491c4d1fd60533cf1d5f8c488fa1807d23c83d8fb2c27",
+      "sample_bytes": 483020
+    },
+    {
+      "url": "https://nextjs.org/docs/15/app/getting-started/layouts-and-pages",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/15/app/getting-started/layouts-and-pages",
+      "sample_sha256": "d5229bc1c6248a575f8fe07621412202963a277ffcc40a9b11fad454ed070a8f",
+      "sample_bytes": 650272
+    },
+    {
+      "url": "https://nextjs.org/docs/15/app/getting-started/server-and-client-components",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/15/app/getting-started/server-and-client-components",
+      "sample_sha256": "d5cd9f17c03c944b198a9651fc50a7ec1c9edb4388db731d205d9fa0696ace48",
+      "sample_bytes": 777603
+    },
+    {
+      "url": "https://nextjs.org/docs/15/app/guides/caching",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/15/app/guides/caching",
+      "sample_sha256": "98776a84d05c7b2054b293588879ecbb7829abb014dfac9f77131d6bf752983d",
+      "sample_bytes": 746828
+    },
+    {
+      "url": "https://nextjs.org/docs/15/app/guides/environment-variables",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/15/app/guides/environment-variables",
+      "sample_sha256": "b858395e584aaa1c853da88483886484c13096e9d8a8ca472b5e0534d7acd63f",
+      "sample_bytes": 563524
+    },
+    {
+      "url": "https://nextjs.org/docs/app/getting-started/caching",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/app/getting-started/caching",
+      "sample_sha256": "309b0b30ab97976242aae2e465519bb1ecdc7c4b592f22af84b82704caf31f60",
+      "sample_bytes": 867266
+    },
+    {
+      "url": "https://nextjs.org/docs/app/getting-started/linking-and-navigating",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/app/getting-started/linking-and-navigating",
+      "sample_sha256": "1c705efcc2488cf5bdfffcaae223610ab18dba4a640547df4dc1c0763ec742ed",
+      "sample_bytes": 708868
+    },
+    {
+      "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "sample_sha256": "adce8131d9b4843193551e537a76cc63be28c493fde08e2668831bbd87a6d79c",
+      "sample_bytes": 812061
+    },
+    {
+      "url": "https://nextjs.org/docs/app/guides/caching-without-cache-components",
+      "status": 200,
+      "final_url": "https://nextjs.org/docs/app/guides/caching-without-cache-components",
+      "sample_sha256": "636b2e9c89d3c1cda6d147e772fc0550e9f6dbaa6502250563118e8f79eb7fe9",
+      "sample_bytes": 702974
+    },
+    {
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+      "status": 200,
+      "final_url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+      "sample_sha256": "ac00589e1bb28f4977b3c82dfb61713b7aac0cbd07b15bd40d8516ef86379524",
+      "sample_bytes": 34156
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "status": 200,
+      "final_url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "sample_sha256": "120eb97411ed20f2c159062b175cf68886183b07d31dd161d365e7436cdb455c",
+      "sample_bytes": 51995
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf",
+      "status": 200,
+      "final_url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf",
+      "sample_sha256": "d4c7a5200fa104f6d5af7d845dc65b99b17ea55fb1fed6a151a7c4d1353bd6e8",
+      "sample_bytes": 106900
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf",
+      "status": 200,
+      "final_url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf",
+      "sample_sha256": "77a2fb7913c44af3864afe3dc789b3ce0d875a82df20b9690bba1eb8bee94839",
+      "sample_bytes": 128770
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf",
+      "status": 200,
+      "final_url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf",
+      "sample_sha256": "0307d990a5638c37d59fb8ca67de75a0afc439461239fa660a7c948dce3bc6d5",
+      "sample_bytes": 117219
+    },
+    {
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf",
+      "status": 200,
+      "final_url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf",
+      "sample_sha256": "202953f283487b812a9a97c17f4a3cb3a9b3e80a300cc6467c3080ffb0be013e",
+      "sample_bytes": 150670
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ARM-software/CMSIS_6/v6.0.0/CMSIS/Core/Include/core_cm4.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/ARM-software/CMSIS_6/v6.0.0/CMSIS/Core/Include/core_cm4.h",
+      "sample_sha256": "d50c55faf66a5942e5c2dddb44ff792867ef759878e3ee6413163f95c07866c7",
+      "sample_bytes": 121059
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ARM-software/CMSIS_6/v6.0.0/CMSIS/Core/Include/m-profile/armv7m_cachel1.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/ARM-software/CMSIS_6/v6.0.0/CMSIS/Core/Include/m-profile/armv7m_cachel1.h",
+      "sample_sha256": "f7905d3e336feccda0647f214e791b424c5f92e788f1303e587cebca729b6dc3",
+      "sample_bytes": 13032
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/semphr.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/semphr.h",
+      "sample_sha256": "454fae279911c48b3636b341c77ecd18a00abc8c50206b9e83cf7d4ae2bccd7f",
+      "sample_bytes": 50241
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/task.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/task.h",
+      "sample_sha256": "f3a76f99198a537ffce4b7876566502e7156a4fbd5b57b56f213bb7884b772c9",
+      "sample_bytes": 164046
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/portable/GCC/ARM_CM4F/port.c",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/portable/GCC/ARM_CM4F/port.c",
+      "sample_sha256": "cb2ce141eb035a890147da04a03dc390504d770d9d3288282ec277b47e92a482",
+      "sample_bytes": 41903
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/queue.c",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/queue.c",
+      "sample_sha256": "e66b73eb6dd7e6b2ccd121ab8d7345ab9698cd655b32171476643284e6dc4f4a",
+      "sample_bytes": 128165
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/tasks.c",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/tasks.c",
+      "sample_sha256": "6a54883765441f12b45b7f2e36838727e8e0aa872054df30c814c473ee3e4149",
+      "sample_bytes": 352352
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/timers.c",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/timers.c",
+      "sample_sha256": "7f91da3b57555aa016c8bc91f90edd348268a8bca42d035d9d53c0e9cbdc40b3",
+      "sample_bytes": 56556
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/main/include/semphr.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/main/include/semphr.h",
+      "sample_sha256": "0c57582d2b2d6920ad1d2955ccb8cf12a8140d22bed03af1e5878730048fd3a3",
+      "sample_bytes": 50262
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/main/include/task.h",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/main/include/task.h",
+      "sample_sha256": "463d29016b1c11dd7c5f9e67b41bf8c1897d9c2dcc510cdc37e3158f32584222",
+      "sample_bytes": 170813
+    },
+    {
+      "url": "https://react.dev/learn/passing-data-deeply-with-context",
+      "status": 200,
+      "final_url": "https://react.dev/learn/passing-data-deeply-with-context",
+      "sample_sha256": "ebaef6eba5ab1fa8039bca4daf7acffdfb4ab36694b3e0c50468323072449917",
+      "sample_bytes": 353429
+    },
+    {
+      "url": "https://react.dev/learn/preserving-and-resetting-state",
+      "status": 200,
+      "final_url": "https://react.dev/learn/preserving-and-resetting-state",
+      "sample_sha256": "76fb75c6a9a382e3e113cb3b26cb4cfe14ee8c98b0d5a00065707d301ec0d264",
+      "sample_bytes": 485883
+    },
+    {
+      "url": "https://react.dev/learn/queueing-a-series-of-state-updates",
+      "status": 200,
+      "final_url": "https://react.dev/learn/queueing-a-series-of-state-updates",
+      "sample_sha256": "e316878ab1d5d528e4c56212fe1d8bdeb8ad17c051fca77edfc85cb12f09e09c",
+      "sample_bytes": 233969
+    },
+    {
+      "url": "https://react.dev/learn/react-developer-tools",
+      "status": 200,
+      "final_url": "https://react.dev/learn/react-developer-tools",
+      "sample_sha256": "677ba7428257f1d174b835c69872780ce896a4d1ef7e3201eea107b766ec7044",
+      "sample_bytes": 110108
+    },
+    {
+      "url": "https://react.dev/learn/render-and-commit",
+      "status": 200,
+      "final_url": "https://react.dev/learn/render-and-commit",
+      "sample_sha256": "be510c7a377944ea03edb7708f1ec7ead9bb9c47183911a0734a35275f9dc614",
+      "sample_bytes": 171031
+    },
+    {
+      "url": "https://react.dev/learn/state-as-a-snapshot",
+      "status": 200,
+      "final_url": "https://react.dev/learn/state-as-a-snapshot",
+      "sample_sha256": "57d10267e38468e96c6b6bfc709240094f5db648df620c9d4ba31d20879e2f1f",
+      "sample_bytes": 233035
+    },
+    {
+      "url": "https://react.dev/learn/synchronizing-with-effects",
+      "status": 200,
+      "final_url": "https://react.dev/learn/synchronizing-with-effects",
+      "sample_sha256": "283a092716681e8b73ca9090bb57f32f46b3ecab64b2418cd85c709ea3afbc41",
+      "sample_bytes": 511854
+    },
+    {
+      "url": "https://react.dev/reference/react/useMemo",
+      "status": 200,
+      "final_url": "https://react.dev/reference/react/useMemo",
+      "sample_sha256": "e9e1bb1b9d7c67438dd1b1692eb3e810ccacd54e98dd634b91c7a33ad253c072",
+      "sample_bytes": 452642
+    },
+    {
+      "url": "https://react.dev/versions",
+      "status": 200,
+      "final_url": "https://react.dev/versions",
+      "sample_sha256": "8539a54cf29f50bc2562fa3b97ab6c929b5818f1e834edcbe5918f5209cb6ffd",
+      "sample_bytes": 234309
+    },
+    {
+      "url": "https://sourceware.org/binutils/docs/binutils/nm.html",
+      "status": 200,
+      "final_url": "https://sourceware.org/binutils/docs/binutils/nm.html",
+      "sample_sha256": "7bef22d192e3bfb7ad4121ce406d2f4264dd74a536a01e88d74e8bf0cace5de4",
+      "sample_bytes": 26773
+    },
+    {
+      "url": "https://sourceware.org/binutils/docs/binutils/objdump.html",
+      "status": 200,
+      "final_url": "https://sourceware.org/binutils/docs/binutils/objdump.html",
+      "sample_sha256": "4fe129bd37a262b2db8e7f55f35fdd2644ec6f76b03a8e4a405614b0715e8028",
+      "sample_bytes": 68879
+    },
+    {
+      "url": "https://sourceware.org/binutils/docs/ld/",
+      "status": 200,
+      "final_url": "https://sourceware.org/binutils/docs/ld/",
+      "sample_sha256": "fcee5e1a7441f44c7529f59104b9acc6a26961dcb541c650657ebe4dded6bade",
+      "sample_bytes": 14660
+    },
+    {
+      "url": "https://sourceware.org/binutils/docs/ld/SECTIONS.html",
+      "status": 200,
+      "final_url": "https://sourceware.org/binutils/docs/ld/SECTIONS.html",
+      "sample_sha256": "9695dad052ffb32f1f4ecdf6aa48015f760af572a0c156c4ef21688c101e0829",
+      "sample_bytes": 5259
+    },
+    {
+      "url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/",
+      "status": 200,
+      "final_url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/",
+      "sample_sha256": "3f9cbd241a1840f5d1106413672f64f2bd76120dfb6ca96da8f0248a1361026c",
+      "sample_bytes": 113565
+    },
+    {
+      "url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Breakpoints.html",
+      "status": 200,
+      "final_url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Breakpoints.html",
+      "sample_sha256": "e32e586001ae51a762ddaafeb97adf64e0e2c1f6f073d46a7717e102ab20f7fd",
+      "sample_bytes": 11105
+    },
+    {
+      "url": "https://tc39.es/ecma262/2023/multipage/",
+      "status": 200,
+      "final_url": "https://tc39.es/ecma262/2023/multipage/",
+      "sample_sha256": "412fc2a025f85dc6e8c7edc9d303c91453cae6a5fe1e8816c1f1af14df5469cd",
+      "sample_bytes": 525624
+    },
+    {
+      "url": "https://tc39.es/ecma262/2023/multipage/control-abstraction-objects.html#sec-promise-objects",
+      "status": 200,
+      "final_url": "https://tc39.es/ecma262/2023/multipage/control-abstraction-objects.html#sec-promise-objects",
+      "sample_sha256": "ccb5a7e9832d79fb86d75b46c53fdeea8a5b539cf48bb81d0fe1521837bccbf7",
+      "sample_bytes": 837483
+    },
+    {
+      "url": "https://www.analog.com/en/resources/analog-dialogue/articles/introduction-to-spi-interface.html",
+      "status": "UNVERIFIED_NETWORK",
+      "detail": "The read operation timed out"
+    },
+    {
+      "url": "https://www.chromium.org/developers/design-documents/multi-process-architecture/",
+      "status": 200,
+      "final_url": "https://www.chromium.org/developers/design-documents/multi-process-architecture/",
+      "sample_sha256": "aa70b29596ad4a8e2df3c8405f3efe569e1e710e8dc67e47d02eb7e419f6966d",
+      "sample_bytes": 17938
+    },
+    {
+      "url": "https://www.kernel.org/doc/html/latest/admin-guide/mm/concepts.html",
+      "status": 200,
+      "final_url": "https://www.kernel.org/doc/html/latest/admin-guide/mm/concepts.html",
+      "sample_sha256": "551dfe9c69a600fa7964648bcb15c5f1ce38712d7024034f87932b9d55e5b50e",
+      "sample_bytes": 24535
+    },
+    {
+      "url": "https://www.mongodb.com/docs/manual/core/index-unique/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/manual/core/index-unique/",
+      "sample_sha256": "5c50dafa0d26b9cf704ec9577b9317bf6551d911a8f33f82c0928d07a3514b53",
+      "sample_bytes": 983327
+    },
+    {
+      "url": "https://www.mongodb.com/docs/manual/core/write-operations-atomicity/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/manual/core/write-operations-atomicity/",
+      "sample_sha256": "258c909c5eee6d569250e2db34b5bb9b0d5a1fac72d5084964d5eb780428cbf6",
+      "sample_bytes": 916580
+    },
+    {
+      "url": "https://www.mongodb.com/docs/manual/tutorial/sort-results-with-indexes/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/manual/tutorial/sort-results-with-indexes/",
+      "sample_sha256": "ac62370da0d1a36a8e1f1805a2a294e7f149de22ff33be8e893340c79e5c11c6",
+      "sample_bytes": 1036844
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/core/index-unique/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/core/index-unique/",
+      "sample_sha256": "6f3641e10984b9bcc033397f357850b6a127641b175d7960a1aeaa10409e849e",
+      "sample_bytes": 1045155
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/core/indexes/index-types/index-compound/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/core/indexes/index-types/index-compound/",
+      "sample_sha256": "b554b99322556ee263577a20831e8587472f9652a4403ceba7c8d9e5504ec435",
+      "sample_bytes": 999663
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/core/retryable-writes/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/core/retryable-writes/",
+      "sample_sha256": "9b05a7fbd9949b969479c53294b5888d3f72a854e389f927d0755dfaee9ef6cb",
+      "sample_bytes": 1014824
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/core/transactions/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/core/transactions/",
+      "sample_sha256": "91ec3aeae961fe974babbaddcda8ddc98979166215e1cca8e04b0e44505770bb",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/core/write-operations-atomicity/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/core/write-operations-atomicity/",
+      "sample_sha256": "4956d81ba31b066e0cfa93e57115ad7c9e006828d3f94cca2448c66275e6f26e",
+      "sample_bytes": 964535
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/reference/bson-types/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/reference/bson-types/",
+      "sample_sha256": "9373ddd2857149f921837e08577713c1f619878e23069bbb7ebeda1504c99282",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/reference/explain-results/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/reference/explain-results/",
+      "sample_sha256": "e993691b8cd14c3950fe001c39405dcc493b33b6bdbf0e2062e891bc5246050a",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.mongodb.com/docs/v8.0/reference/read-concern-snapshot/",
+      "status": 200,
+      "final_url": "https://www.mongodb.com/docs/v8.0/reference/read-concern-snapshot/",
+      "sample_sha256": "9f1b09de5d75c7a1fdec25a6220293a71b61c4feb57904f4fcac26e5288e7443",
+      "sample_bytes": 1013064
+    },
+    {
+      "url": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf",
+      "status": 404,
+      "detail": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+      "status": 200,
+      "final_url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+      "sample_sha256": "c4b5320e50926998b08e029ade682ffce1ea41a67306aee52703a16a5a10301f",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+      "status": 200,
+      "final_url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+      "sample_sha256": "cbedb5dc56c06bb5f663e4434b62cc5429b2dc979e067cad8190c37e7faf1588",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/ddl-constraints.html",
+      "status": 200,
+      "final_url": "https://www.postgresql.org/docs/16/ddl-constraints.html",
+      "sample_sha256": "28eb13916ccaa9e6b347ee0cdacbd116670f4b5dbb64d6bc8bcc3d850c44572b",
+      "sample_bytes": 44713
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/explicit-locking.html",
+      "status": 200,
+      "final_url": "https://www.postgresql.org/docs/16/explicit-locking.html",
+      "sample_sha256": "74f89918dfbad85cf07a839b70b8810b5a232734b3ff0a0c5e3b678c513840de",
+      "sample_bytes": 46805
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/transaction-iso.html",
+      "status": 200,
+      "final_url": "https://www.postgresql.org/docs/16/transaction-iso.html",
+      "sample_sha256": "e65d2f20ab01d80d202ca76fb568d02bb74a414d712d73dd305405683694cf9e",
+      "sample_bytes": 47350
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/tutorial-join.html",
+      "status": 200,
+      "final_url": "https://www.postgresql.org/docs/16/tutorial-join.html",
+      "sample_sha256": "1cbb3e6b8cdb869304715cb667e4bf7cc282c3f3dae007a5630dcdd3b4334377",
+      "sample_bytes": 22287
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "status": 200,
+      "final_url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "sample_sha256": "e5753b8bae282c289fb3541715a92d5451b5ec6a49329679082e58f95bdc0978",
+      "sample_bytes": 47648
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc5789.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc5789.html",
+      "sample_sha256": "51d01aab4c9440fbc009d15a15c62a1bb567688baa2b809fd9d266b2c429e8a3",
+      "sample_bytes": 26620
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc7519.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc7519.html",
+      "sample_sha256": "d0ca0d6c6f8b7dfcad6e13c55086694d7ee69665bb828dcac6362d1587b4b53b",
+      "sample_bytes": 83832
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8725.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc8725.html",
+      "sample_sha256": "7f93df8a106c14e2c9394bd3fc12a488266477c89a1fe2f9182cf0bdb02d7ce0",
+      "sample_bytes": 89311
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "sample_sha256": "924c6fdc459fd4e0b4e22e05146121df830c6a7dc38fff45f3c796df3dbfed47",
+      "sample_bytes": 1048576
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "sample_sha256": "ce91ee9848d2b9ac46386b0f0cbd4bfd9c0cd1948ebc363834cadc7e0997f3d7",
+      "sample_bytes": 232630
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+      "status": 200,
+      "final_url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+      "sample_sha256": "9295268c32dacf5298a199016f95d75a7c649f83450eb38905c12de6cd12cd66",
+      "sample_bytes": 388636
+    },
+    {
+      "url": "https://www.st.com/resource/en/application_note/DM00272913-.pdf",
+      "status": "UNVERIFIED_NETWORK",
+      "detail": "The read operation timed out"
+    },
+    {
+      "url": "https://www.st.com/resource/en/application_note/an2834-how-to-get-the-best-adc-accuracy-in-stm32-microcontrollers-stmicroelectronics.pdf",
+      "status": "UNVERIFIED_NETWORK",
+      "detail": "The read operation timed out"
+    },
+    {
+      "url": "https://www.st.com/resource/en/application_note/an4776-generalpurpose-timer-cookbook-for-stm32-microcontrollers-stmicroelectronics.pdf",
+      "status": "UNVERIFIED_NETWORK",
+      "detail": "The read operation timed out"
+    },
+    {
+      "url": "https://www.ti.com/lit/an/sloa101b/sloa101b.pdf",
+      "status": 200,
+      "final_url": "https://www.ti.com/lit/an/sloa101b/sloa101b.pdf",
+      "sample_sha256": "32abab14388402ec313f77648f0b4dd3e986cc1ff18988f2e7549db3a665a694",
+      "sample_bytes": 345278
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html",
+      "status": 200,
+      "final_url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html",
+      "sample_sha256": "c185d1e844b5a081fbebd3e9873a5a43c72c2c4eeec10c4d909f9a00437c81f2",
+      "sample_bytes": 321570
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+      "status": 200,
+      "final_url": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+      "sample_sha256": "32a1d57ea607183f67b46cd626d9bd2356ec28eea180a2a056feee25e7b7ac91",
+      "sample_bytes": 298140
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+      "status": 200,
+      "final_url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+      "sample_sha256": "f88e551810ce49b48df5b52c4031900c2030182e859969a6364a4337dc8417c3",
+      "sample_bytes": 332677
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html",
+      "status": 200,
+      "final_url": "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html",
+      "sample_sha256": "a4a306ebe00cd456cc643503f7b872582d97bf646d76dd52e51d75537012a544",
+      "sample_bytes": 195588
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
+      "status": 200,
+      "final_url": "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
+      "sample_sha256": "3e6425b3bffb91e0a3b55d7cdf084714cd6712988a3ca1a43d783b37133ff195",
+      "sample_bytes": 244408
+    }
+  ]
+}

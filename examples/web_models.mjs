@@ -7,6 +7,8 @@ function deferred() {
   return { promise, resolve };
 }
 // State queue model, not a React renderer.
+// Real React race regression/fix: react-race/README.md. Other fixtures below
+// remain host models; the renderer evidence does not verify this whole file.
 const snapshot = 0;
 let replacement = snapshot;
 for (const next of [snapshot + 1, snapshot + 1, snapshot + 1]) replacement = next;

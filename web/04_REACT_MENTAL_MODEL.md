@@ -67,6 +67,8 @@ Render tạo element descriptions; reconciliation nối descriptions với ident
 
 ## 10. Ví dụ tối thiểu
 
+**Fixture đã chạy, phạm vi hẹp:** [React race regression/fix](../examples/react-race/README.md) render component bằng React DOM trong jsdom. Cùng một test hoàn tất B rồi A: bản lỗi hiển thị A và FAIL assertion cần B; bản sửa dùng cờ stale trong effect cleanup giữ B và PASS. [Evidence](../evidence/react-race/summary.json) chứa lệnh, phiên bản và raw logs. Counter và identity fragments dưới đây vẫn chưa chạy; fixture race không xác minh các fragments đó.
+
 Fragment React19 trong component, **chưa chạy framework fixture**:
 
 ```jsx

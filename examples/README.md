@@ -1,5 +1,11 @@
 # Ví dụ chạy độc lập
 
+## React renderer fixture
+
+[React race: bản lỗi và bản sửa](react-race/README.md) dùng React DOM, Vitest và Testing Library thật. Bản lỗi FAIL khi A về sau B; bản sửa PASS với cùng invariant. [Log và phiên bản](../evidence/react-race/summary.json) ghi kết quả đã chạy. Phạm vi là jsdom với Promise fixture, chưa phải HTTP/browser integration. Backend ASP.NET/MongoDB còn [BLOCKED](../audit/PHASE_STATUS.md).
+
+## Host models
+
 Không cần cài React/MongoDB/RTOS để chạy ba bộ này. Đây là **mô hình cơ chế** và test core language, không thay integration test/framework/board. Chạy từ thư mục `examples`:
 
 ```powershell

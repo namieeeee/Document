@@ -1,5 +1,18 @@
 # Validation — mở rộng giáo trình ngày 2026-10-06
 
+## Cập nhật Phase 2 — 2026-10-06
+
+Phase 1 được **SKIPPED theo yêu cầu trực tiếp của người dùng**; không coi các tiêu chí compiler/sanitizer của phase đó đã đạt. [Trạng thái](audit/PHASE_STATUS.md) ghi phạm vi và phần còn chặn.
+
+| Claim | Lệnh từ `examples/react-race` | Quan sát thực tế | Evidence | Mức độ |
+|---|---|---|---|---|
+| Phản hồi A cũ ghi đè B trong component lỗi | `python verify.py` chạy Vitest với `RACE_VARIANT=broken` | exit 1; assertion nhận A, cần B; 1 failed / 1 passed | [Log](evidence/react-race/broken.log), [report](evidence/react-race/broken.json) | VERIFIED trong fixture jsdom |
+| Effect cleanup đánh dấu stale giữ B | Cùng runner, `RACE_VARIANT=fixed` | exit 0; 2 tests passed | [Log](evidence/react-race/fixed.log), [report](evidence/react-race/fixed.json) | VERIFIED trong fixture jsdom |
+
+[Bản ghi thực thi](evidence/react-race/summary.json) có timestamp UTC, Python và toàn bộ lệnh/exit codes. [Node](evidence/react-race/node-version.log), [npm](evidence/react-race/npm-version.log) và [dependency versions](evidence/react-race/package-versions.log) ghi phiên bản thật. Runner trả exit 0 chỉ khi đúng test regression thất bại và cả hai test bản sửa thành công. Cài dependency bằng `npm ci`; [hướng dẫn](examples/react-race/README.md) mô tả chạy lại và giới hạn.
+
+Backend ASP.NET Core/MongoDB **BLOCKED**: chưa tìm được Docker/Podman/mongod trong môi trường hiện tại. Chưa chạy conditional update, unique-index concurrency hay replay bằng MongoDB. C# process-local models vẫn là MODEL; không dùng kết quả React để tuyên bố hoàn tất Phase 2. Theo prompt, Phases 3–5 còn chờ Phase 2.
+
 ## Phase theory-first hiện tại — 2026-10-06
 
 Phần này là kết quả của đợt hoàn thiện lý thuyết; các blocks bên dưới giữ kết quả/lịch sử phase trước. [Report hiện tại](THEORY_COMPLETION_REPORT.md) và [matrix](THEORY_COVERAGE_MATRIX.md) quyết định coverage mới. Không gộp tests hai phase để tăng số kiểm tra đã chạy.

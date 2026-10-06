@@ -1,0 +1,14 @@
+{
+  "date_utc": "2026-10-06T03:30:19.076448+00:00",
+  "method": "shutil.which: PATH discovery only",
+  "tools": {
+    "docker": null,
+    "podman": null,
+    "mongod": null,
+    "dotnet": "C:\\Program Files\\dotnet\\dotnet.EXE",
+    "node": "C:\\Program Files\\nodejs\\node.EXE",
+    "npm.cmd": "C:\\Program Files\\nodejs\\npm.cmd"
+  },
+  "standard_docker_path_exists": false,
+  "backend_status": "BLOCKED: no discovered Docker Compose MongoDB runtime; no backend invariants executed"
+}

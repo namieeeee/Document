@@ -1,0 +1,32 @@
+
+ RUN  v5.0.3 C:/Users/Trann/Work_Space/Document_Code/knowledge_base/examples/react-race
+
+ × race.test.js > keeps latest result when B completes before stale A 39ms
+   → expected 'A' to be 'B' // Object.is equality
+ ✓ race.test.js > publishes B when responses complete in request order 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  race.test.js > keeps latest result when B completes before stale A
+AssertionError: expected 'A' to be 'B' // Object.is equality
+
+Expected: "B"
+Received: "A"
+
+ ❯ race.test.js:29:62
+     27|   await settle('A');
+     28|   // This invariant is identical for both implementations. Broken obse…
+     29|   expect(screen.getByLabelText('search result').textContent).toBe('B');
+       |                                                              ^
+     30| });
+     31|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  10:28:32
+   Duration  27.32s (environment 81%, import 18%)
+
+JSON report written to C:/Users/Trann/Work_Space/Document_Code/knowledge_base/evidence/react-race/broken.json

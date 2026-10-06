@@ -23,6 +23,7 @@ Giáo trình kỹ thuật tiếng Việt theo hướng **theory first**: nền t
 | [Validation](VALIDATION.md) | Kiểm tra đã chạy và phần chưa xác minh |
 | [Theory completion report](THEORY_COMPLETION_REPORT.md) | Báo cáo đợt mở rộng lý thuyết |
 | [Ví dụ trên host](examples/README.md) | Cách chạy các models minh họa |
+| [Trạng thái các phase](audit/PHASE_STATUS.md) | Phase 1 bỏ qua theo yêu cầu; React có evidence, MongoDB còn BLOCKED |
 
 ## Phạm vi kiểm chứng
 

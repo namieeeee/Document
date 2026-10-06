@@ -51,6 +51,8 @@ Keys/constraints phản ánh invariant đúng scope; query result stable order v
 
 ## 10. Ví dụ tối thiểu
 
+[ASP.NET/MongoDB fixture](../examples/MongoApi/README.md) đã chạy conditional update và unique index dưới concurrent HTTP requests: 20/20 rounds ([evidence](../evidence/mongo-api/summary.json)). Phạm vi standalone/single instance; snippet compound-index pagination dưới đây vẫn chưa chạy explain, không được xác minh bởi test đó.
+
 Pseudocode Mongo8, **chưa chạy DB**:
 
 ```javascript

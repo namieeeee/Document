@@ -67,6 +67,8 @@ Transaction không giữ locks trên HTTP payment service hoặc biến memory �
 
 ## 10. Ví dụ tối thiểu
 
+[MongoDB execution fixture](../examples/MongoApi/README.md) kiểm chứng single-document conditional update, unique key và replay qua HTTP ([log](../evidence/mongo-api/verification.log)). Chưa kiểm chứng multi-document transaction, isolation levels hay failover; không nâng những phần đó thành VERIFIED.
+
 Pseudocode, **kết quả dự đoán**:
 
 ```text

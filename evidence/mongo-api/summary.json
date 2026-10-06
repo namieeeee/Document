@@ -1,0 +1,66 @@
+{
+  "date_utc": "2026-10-06T03:48:56.226072+00:00",
+  "result": "PASS",
+  "rounds": 20,
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\Trann\\Work_Space\\Tool\\document-mongo-8.0.15\\mongodb-win32-x86_64-windows-8.0.15\\bin\\mongod.exe",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "dotnet",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "dotnet",
+        "build",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "dotnet",
+        "list",
+        "package"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\Trann\\Work_Space\\Tool\\document-mongo-8.0.15\\mongodb-win32-x86_64-windows-8.0.15\\bin\\mongod.exe",
+        "--dbpath",
+        "C:\\Users\\Trann\\AppData\\Local\\Temp\\document-mongo-fixture-yq8t6py5",
+        "--bind_ip",
+        "127.0.0.1",
+        "--port",
+        "27029"
+      ]
+    },
+    {
+      "command": [
+        "dotnet",
+        "C:\\Users\\Trann\\Work_Space\\Document_Code\\knowledge_base\\examples\\MongoApi\\bin\\Release\\net8.0\\MongoApi.dll",
+        "--urls",
+        "http://127.0.0.1:5291"
+      ]
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\Trann\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "verify.py",
+    "--mongod",
+    "C:\\Users\\Trann\\Work_Space\\Tool\\document-mongo-8.0.15\\mongodb-win32-x86_64-windows-8.0.15\\bin\\mongod.exe"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "runtime": "native standalone MongoDB",
+  "scope": "single API instance, standalone MongoDB, no replica-set/failover/majority-write-concern/transactions"
+}

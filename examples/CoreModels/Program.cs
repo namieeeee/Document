@@ -4,6 +4,9 @@ static void Check(bool condition, string name)
     Console.WriteLine("PASS " + name);
 }
 
+// Actual ASP.NET/MongoDB HTTP fixture: ../MongoApi/README.md.
+// This file remains a process-local MODEL; see its original scope comments.
+
 // Deterministic schedule: both callers read before either writes.
 var bothRead = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
 int readers = 0, unsafeStock = 1, successes = 0;

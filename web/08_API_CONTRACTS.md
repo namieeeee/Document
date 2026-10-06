@@ -55,6 +55,8 @@ Client không set owner/role/tenant internal fields. Business transition và exp
 
 ## 10. Ví dụ tối thiểu
 
+[ASP.NET Core/MongoDB fixture](../examples/MongoApi/README.md) đã kiểm thử replay cùng key/payload và conflict khác payload trong 20 lượt với 8 requests song song ([record](../evidence/mongo-api/summary.json)). Chỉ claim idempotency trong fixture đó đã chạy; PATCH authorization/version contract dưới đây vẫn là pseudocode.
+
 Contract minh họa **pseudocode**, không OpenAPI ứng dụng thật:
 
 ```text

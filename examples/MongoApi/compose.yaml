@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: mongo:8.0.15
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+  api:
+    build: .
+    environment:
+      MONGO_HOST: mongo
+    ports:
+      - "127.0.0.1:5291:8080"
+    depends_on:
+      mongo:
+        condition: service_healthy

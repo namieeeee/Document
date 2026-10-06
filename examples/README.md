@@ -2,7 +2,9 @@
 
 ## React renderer fixture
 
-[React race: bản lỗi và bản sửa](react-race/README.md) dùng React DOM, Vitest và Testing Library thật. Bản lỗi FAIL khi A về sau B; bản sửa PASS với cùng invariant. [Log và phiên bản](../evidence/react-race/summary.json) ghi kết quả đã chạy. Phạm vi là jsdom với Promise fixture, chưa phải HTTP/browser integration. Backend ASP.NET/MongoDB còn [BLOCKED](../audit/PHASE_STATUS.md).
+[React race: bản lỗi và bản sửa](react-race/README.md) dùng React DOM, Vitest và Testing Library thật. Bản lỗi FAIL khi A về sau B; bản sửa PASS với cùng invariant. [Log và phiên bản](../evidence/react-race/summary.json) ghi kết quả đã chạy. Phạm vi là jsdom với Promise fixture, chưa phải HTTP/browser integration.
+
+[ASP.NET Core/MongoDB fixture](MongoApi/README.md) đã chạy concurrent HTTP tests trên MongoDB standalone thật: 20/20 lượt cho ba invariant. [Evidence](../evidence/mongo-api/summary.json). Docker Compose/replica-set/multiple-instance scopes được ghi riêng.
 
 ## Host models
 

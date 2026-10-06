@@ -19,7 +19,7 @@ Expected: broken reverse-order test FAIL; broken normal-order test PASS; fixed t
 
 ## Scope
 
-This verifies React effect cleanup and DOM result under two controlled Promise schedules in jsdom. The request adapter is a fixture: this is not a live HTTP integration test, real browser rendering or a claim about every possible schedule. StrictMode, network cancellation, errors and unmount behavior are outside these two tests. MongoDB verification remains [blocked](../../audit/PHASE_STATUS.md).
+This verifies React effect cleanup and DOM result under two controlled Promise schedules in jsdom. The request adapter is a fixture: this is not a live HTTP integration test, real browser rendering or a claim about every possible schedule. StrictMode, network cancellation, errors and unmount behavior are outside these two tests. Separate [MongoDB HTTP verification](../MongoApi/README.md) uses a real standalone database; it does not broaden this renderer fixture's scope.
 
 Sources: [React useEffect, fetching data](https://react.dev/reference/react/useEffect#fetching-data-with-effects), [Vitest guide](https://vitest.dev/guide/), [Testing Library React API](https://testing-library.com/docs/react-testing-library/api/).
 

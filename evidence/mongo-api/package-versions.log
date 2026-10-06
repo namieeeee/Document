@@ -1,0 +1,5 @@
+Project 'MongoApi' has the following package references
+   [net8.0]: 
+   Top-level Package      Requested   Resolved
+   > MongoDB.Driver       3.5.0       3.5.0   
+

@@ -1,0 +1,27 @@
+# Generated output
+**/bin/
+**/obj/
+**/__pycache__/
+*.py[cod]
+node_modules/
+.next/
+dist/
+coverage/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+.vs/
+.idea/
+*.user
+*.suo
+
+# Local operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini

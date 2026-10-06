@@ -27,7 +27,7 @@ Root 02–04 are navigation pages to canonical articles. Historical text is reta
 - A4: determined by documentation-checks report; workflow runs the checker on future pushes/PRs.
 - A6: all 39 canonical articles have a claim/evidence/level row; levels describe those claims only.
 - A7: all 39 outlines exist; VERIFIED/MODEL examples have log-derived demo sections, remaining source-only demos stay BLOCKED.
-- Docker Compose/CI are UNVERIFIED until their own execution evidence exists. Native standalone DB does not prove replica-set/failover/multiple-API-instance/transaction guarantees.
+- Docker Compose/CI passed on the tested source commit `0e931789f34bb636160f0354de07f3ee170d2360`. [GitHub run](https://github.com/namieeeee/Document/actions/runs/37410943527), [recorded API metadata](../evidence/ci-run.json) and uploaded `mongodb-evidence` / `documentation-and-react-evidence` artifacts provide their own execution records. Neither native nor CI fixtures prove replica-set/failover/multiple-API-instance/transaction guarantees.
 - MCU/RTOS probes, ARM ELF, browser paint/performance and native C/C++ compiler/sanitizer checks are unavailable in this run; no output is invented for them.
 - Phase 0 external-link snapshot includes one HTTP 404 and five inconclusive connection results; source historical content changes were not established.
 
@@ -49,5 +49,6 @@ Changes are split into backend verification, document consistency and review/con
 - `25e389f`: real ASP.NET/MongoDB fixture, native execution logs and scoped article references.
 - `ced5bff`: canonical navigation, historical archive and documentation/CI checker.
 - The subsequent review/content commit contains the claim ledger, 39 outlines, review checklist and aggregate runner; its hash is available in `git log` (a commit cannot embed its own final hash).
+- `0e93178`: review/content/runner implementation; both GitHub Actions jobs passed. The subsequent evidence-only documentation commit records that successful run and does not change runtime implementation.
 
 [Phase status](PHASE_STATUS.md) · [Index](../00_INDEX.md).

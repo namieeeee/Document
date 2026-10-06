@@ -2,6 +2,8 @@
 
 ## Trạng thái bằng chứng hiện hành
 
+**CI đã PASS** cho source commit `0e93178`: cả `documentation-and-react` và `mongodb`, gồm Docker Compose và concurrent HTTP assertions. [Lượt chạy](https://github.com/namieeeee/Document/actions/runs/37410943527) · [metadata đã lưu](evidence/ci-run.json). Raw reports/versions nằm trong hai artifact của lượt chạy; record native phía dưới được giữ riêng, không đổi tên thành Docker evidence.
+
 Các mục lịch sử phía dưới giữ nguyên văn bản và kết quả từng đợt. Câu PASS không kèm raw execution record trong repository được coi là **UNVERIFIED đối với khả năng tái kiểm chứng**, không phải chứng nhận hiện tại. [Audit claims](audit/UNSUPPORTED_CLAIMS.md) liệt kê những chỗ đó. Không phủ nhận các lần chạy cũ; không sử dụng chúng thay log mới.
 
 Các execution record hiện tại: [host models](evidence/host-models/summary.json), [React](evidence/react-race/summary.json), [MongoDB](evidence/mongo-api/summary.json) và [documentation checker](evidence/documentation-checks.json). Dùng [claim matrix](THEORY_COVERAGE_MATRIX.md#claim--evidence--mức-độ) để biết chính xác claim và giới hạn. Docker Compose/CI chỉ được gọi PASS khi có record của chính môi trường đó.

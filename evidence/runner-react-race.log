@@ -1,0 +1,6 @@
+node-version: exit 0
+npm-version: exit 0
+package-versions: exit 0
+broken: exit 1
+fixed: exit 0
+PASS: expected regression failure and fixed invariant

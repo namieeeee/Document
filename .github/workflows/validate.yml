@@ -32,6 +32,11 @@ jobs:
         working-directory: examples/MongoApi
       - run: python verify.py --external
         working-directory: examples/MongoApi
+      - run: |
+          docker compose exec -T mongo mongod --version > ../../evidence/mongo-api/mongodb-version.log
+          docker compose exec -T api dotnet --info > ../../evidence/mongo-api/dotnet-runtime.log
+          docker compose config > ../../evidence/mongo-api/compose-config.log
+        working-directory: examples/MongoApi
       - run: docker compose logs > ../../evidence/mongo-compose.log
         if: always()
         working-directory: examples/MongoApi

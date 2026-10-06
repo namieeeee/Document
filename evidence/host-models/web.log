@@ -1,0 +1,6 @@
+PASS snapshot/functional queue model
+PASS forced response race / both completion orders
+PASS rollback ownership
+PASS runtime shape including null/wrong types
+PASS money fixture in integer minor units
+PASS event-loop blocking; timer observed after 41.5ms

@@ -23,9 +23,13 @@ Giáo trình kỹ thuật tiếng Việt theo hướng **theory first**: nền t
 | [Validation](VALIDATION.md) | Kiểm tra đã chạy và phần chưa xác minh |
 | [Theory completion report](THEORY_COMPLETION_REPORT.md) | Báo cáo đợt mở rộng lý thuyết |
 | [Ví dụ trên host](examples/README.md) | Cách chạy các models minh họa |
-| [Trạng thái các phase](audit/PHASE_STATUS.md) | Phase 1 bỏ qua theo yêu cầu; React có evidence, MongoDB còn BLOCKED |
+| [Trạng thái các phase](audit/PHASE_STATUS.md) | Phase 1 bỏ qua; React và MongoDB standalone có evidence; target chưa đo ghi rõ |
 
 ## Phạm vi kiểm chứng
+
+[Outlines cho kênh](content/README.md) · [review checklist](REVIEW_CHECKLIST.md) · [báo cáo các phase](audit/COMPLETION_REPORT.md).
+
+Chạy kiểm tra link/cấu trúc/lab-map: `python scripts/check_links.py`. Chạy các fixture đã chuẩn bị: `python scripts/run_all.py --mongod <absolute-path-to-mongod>`. Thiếu MongoDB được ghi BLOCKED với exit 2; Phase 1 native C/C++ vẫn bỏ qua theo yêu cầu. CI definitions có trong `.github/workflows/validate.yml`; workflow được cung cấp không đồng nghĩa đã chạy PASS.
 
 Labs là **educational reproductions**, không phải các incidents production. Ví dụ model/pseudocode và kết quả dự đoán được phân biệt với code đã thực thi trong validation. Host models không thay kiểm tra browser/framework, Linux hoặc MCU/RTOS trên target thật.
 

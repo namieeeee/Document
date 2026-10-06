@@ -1,0 +1,392 @@
+[
+  {
+    "chapter": "foundations/01_DIGITAL_REPRESENTATION.md",
+    "title": "Bit, số và byte: từ ý nghĩa tới representation",
+    "level": "UNVERIFIED",
+    "claim": "Độ rộng field, byte order, signedness và đơn vị phải được thống nhất ở hai đầu. Giá trị đầu vào nằm trong miền representable; byte offset+width không vượt capacity. Bits reserved được xử lý theo format; không tự xem mọi unknown bit là lỗi hoặc cho phép chúng thay field khác. Phép toán ngôn ngữ phải hợp lệ độc lập với representation của CPU.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/01_HTTP_BROWSER.md",
+    "title": "Computer ↔ network ↔ browser: một URL đi đâu?",
+    "level": "UNVERIFIED",
+    "claim": "HTTP request ≠ TCP connection; CORS ≠ authorization; cookie ≠ session; URL ≠ resource memory. Đích protocol phải đúng, TLS trust đúng, credentials chỉ tới boundary cần nó, cache không trộn principals. Server kiểm authority trên mọi protected operation, kể cả request không có Origin hoặc từ client khác browser.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "foundations/02_JAVASCRIPT_LANGUAGE.md",
+    "title": "JavaScript language: bindings, objects và reachable memory",
+    "level": "MODEL",
+    "claim": "Snapshot replacement và functional update queue cho kết quả khác trong host model.",
+    "evidence": "evidence/host-models/web.log",
+    "command": "node examples/web_models.mjs",
+    "observed": "PASS snapshot/functional queue model",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "web/12_HTTP_SEMANTICS.md",
+    "title": "HTTP: semantics, representation, cache và partial failure",
+    "level": "UNVERIFIED",
+    "claim": "Cache key/policy giữ đúng representation và principal; protected personalized data không bị shared cache replay cho user khác. Retry phải giữ cùng intent và không thực hiện effect mới khi outcome chưa biết. Precondition được kiểm cùng mutation atomic phía server; kiểm ETag rồi ghi vô điều kiện vẫn race. Deadline/cancel chỉ là observation/control request ở một boundary.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/13_BROWSER_INTERNALS.md",
+    "title": "Browser: từ parser tới pixels, events và storage",
+    "level": "UNVERIFIED",
+    "claim": "DOM/render/accessibility state phải tương ứng cùng UI intent; input có accessible name/focus/error path. Listener và subscription được cleanup đúng identity. Không trust localStorage/IndexedDB để quyết định quyền server. Khi đo performance, workload và viewport/device phải được giữ để so sánh. Storage writes success không phải durability guarantee cho business server.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/02_JS_RUNTIME.md",
+    "title": "JavaScript async runtime: jobs, host và thời gian",
+    "level": "MODEL",
+    "claim": "Request completion đảo thứ tự có thể publish stale result; model có ownership guard.",
+    "evidence": "evidence/host-models/web.log",
+    "command": "node examples/web_models.mjs",
+    "observed": "PASS forced response race / both completion orders",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "web/03_TYPESCRIPT_BOUNDARIES.md",
+    "title": "TypeScript: mô hình tĩnh và runtime boundary",
+    "level": "UNVERIFIED",
+    "claim": "Không access raw external data trước guard; parser trả object normalized/whitelisted theo contract hoặc explicit error. Compile strict và runtime checks là hai lớp. Discriminated union states phải exhaustive và impossible transition được xử lý; invalid data không được silently cast thành valid state. Type assertion không bằng authorization hoặc domain validation.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/04_REACT_MENTAL_MODEL.md",
+    "title": "React: render snapshots, identity và commit",
+    "level": "VERIFIED",
+    "claim": "Effect cleanup stale guard giữ B khi phản hồi A tới sau B trong React DOM fixture.",
+    "evidence": "evidence/react-race/fixed.log",
+    "command": "cd examples/react-race && python verify.py",
+    "observed": "\n RUN  v5.0.3 C:/Users/Trann/Work_Space/Document_Code/knowledge_base/examples/react-race\n\n × race.test.js > keeps latest result when B completes before stale A 38ms\n   → expected 'A' to be 'B' // Object.is equality\n ✓ race.test.js > publishes B when responses complete in request order 6ms\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  race.test.js > keeps latest result when B completes before stale A\nAssertionError: expected 'A' to be 'B' // Object.is equality\n\nExpected: \"B\"\nReceived: \"A\"\n\n ❯ race.test.js:29:62\n     27|   await settle('A');\n     28|   // This invariant is identical for both implementations. Broken obse…\n     29|   expect(screen.getByLabelText('search result').textContent).toBe('B');\n       |                                                              ^\n     30| });\n     31|\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n\n Test Files  1 failed (1)\n      Tests  1 failed | 1 passed (2)\n   Start at  10:48:33\n   Duration  13.54s (environment 86%, import 13%)\n\nJSON report written to C:/Users/Trann/Work_Space/Document_Code/knowledge_base/evidence/react-race/broken.json\n\n\n RUN  v5.0.3 C:/Users/Trann/Work_Space/Document_Code/knowledge_base/examples/react-race\n\n ✓ race.test.js > keeps latest result when B completes before stale A 30ms\n ✓ race.test.js > publishes B when responses complete in request order 4ms\n\n Test Files  1 passed (1)\n      Tests  2 passed (2)\n   Start at  10:48:49\n   Duration  1.65s (environment 81%, import 13%, transform 3%, tests 2%)\n\nJSON report written to C:/Users/Trann/Work_Space/Document_Code/knowledge_base/evidence/react-race/fixed.json\n",
+    "limit": "React DOM/jsdom với hai Promise schedules; không phải HTTP, browser paint, StrictMode hay kiểm chứng toàn bộ React."
+  },
+  {
+    "chapter": "web/05_NEXT_EXECUTION.md",
+    "title": "Next.js: build, server, browser và boundary",
+    "level": "UNVERIFIED",
+    "claim": "Không secret/private authority đi client graph/payload. Serialized props chỉ chứa permitted values. First client render tương thích initial HTML; mutation được authorize tại server boundary. Cache key/policy không trộn tenant/user; invalidation tác động đúng layer. Route lifecycle được kiểm trước giả unmount của subscription.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/06_CSHARP_RUNTIME.md",
+    "title": "C# language: value, reference và resource lifetime",
+    "level": "MODEL",
+    "claim": "Checked arithmetic tại int boundary ném exception trong C# fixture, không chứng minh C UB.",
+    "evidence": "evidence/host-models/core.log",
+    "command": "dotnet run --project examples/CoreModels/CoreModels.csproj -c Release",
+    "observed": "PASS checked arithmetic boundary (C# not C UB)",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "web/14_DOTNET_ASYNC_RUNTIME.md",
+    "title": ".NET: IL/JIT/GC và async continuations",
+    "level": "MODEL",
+    "claim": "Token cancellation được truyền tới Task.Delay và được quan sát trong fixture.",
+    "evidence": "evidence/host-models/core.log",
+    "command": "dotnet run --project examples/CoreModels/CoreModels.csproj -c Release",
+    "observed": "PASS propagated cancellation",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "web/07_ASPNET_LIFECYCLE.md",
+    "title": "ASP.NET Core: lifecycle request và dependency scope",
+    "level": "UNVERIFIED",
+    "claim": "Auth/authorization trước protected side effects; binding/validation chưa đủ domain invariant. Dependency dài lifetime không capture ngắn lifetime; user/tenant request state không shared singleton. Error outcome giữ HTTP meaning, không swallow thành empty200; trace không chứa secrets. Không dùng context sau request lifetime.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/08_API_CONTRACTS.md",
+    "title": "API: resource, command, validation và version",
+    "level": "VERIFIED",
+    "claim": "Cùng idempotency key/payload trả một orderId; payload khác bị 409 trong HTTP/MongoDB fixture.",
+    "evidence": "evidence/mongo-api/verification.log",
+    "command": "python examples/MongoApi/verify.py --mongod <path-to-mongod>",
+    "observed": "database=document_fixture_753b4351f86942aa9787bbcbe2666fe8\nEXPECTED FAIL broken stock invariant: successes=2 for available=1\nround 1: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 2: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 3: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 4: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 5: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 6: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 7: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 8: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 9: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 10: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 11: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 12: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 13: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 14: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 15: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 16: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 17: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 18: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 19: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 20: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nPASS: 20/20 rounds for each of 3 database invariants\n",
+    "limit": "Standalone MongoDB, một API instance và 20 rounds; không chứng minh multi-document transaction, replica set, failover hoặc majority write concern. Docker Compose chưa chạy local."
+  },
+  {
+    "chapter": "web/09_DATABASE_CONCURRENCY.md",
+    "title": "Database foundation: storage, relations và access paths",
+    "level": "VERIFIED",
+    "claim": "Conditional single-document update và unique index giữ invariant dưới concurrent HTTP requests.",
+    "evidence": "evidence/mongo-api/verification.log",
+    "command": "python examples/MongoApi/verify.py --mongod <path-to-mongod>",
+    "observed": "database=document_fixture_753b4351f86942aa9787bbcbe2666fe8\nEXPECTED FAIL broken stock invariant: successes=2 for available=1\nround 1: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 2: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 3: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 4: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 5: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 6: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 7: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 8: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 9: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 10: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 11: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 12: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 13: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 14: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 15: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 16: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 17: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 18: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 19: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 20: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nPASS: 20/20 rounds for each of 3 database invariants\n",
+    "limit": "Standalone MongoDB, một API instance và 20 rounds; không chứng minh multi-document transaction, replica set, failover hoặc majority write concern. Docker Compose chưa chạy local."
+  },
+  {
+    "chapter": "web/15_DATABASE_TRANSACTIONS.md",
+    "title": "Concurrency và consistency: invariant nằm ở đâu?",
+    "level": "VERIFIED",
+    "claim": "Conditional single-document update và unique index giữ invariant dưới concurrent HTTP requests.",
+    "evidence": "evidence/mongo-api/verification.log",
+    "command": "python examples/MongoApi/verify.py --mongod <path-to-mongod>",
+    "observed": "database=document_fixture_753b4351f86942aa9787bbcbe2666fe8\nEXPECTED FAIL broken stock invariant: successes=2 for available=1\nround 1: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 2: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 3: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 4: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 5: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 6: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 7: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 8: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 9: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 10: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 11: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 12: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 13: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 14: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 15: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 16: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 17: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 18: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 19: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nround 20: conditional-update PASS; unique-index PASS; idempotent-replay PASS (8 concurrent + 1 retry + conflict)\nPASS: 20/20 rounds for each of 3 database invariants\n",
+    "limit": "Standalone MongoDB, một API instance và 20 rounds; không chứng minh multi-document transaction, replica set, failover hoặc majority write concern. Docker Compose chưa chạy local."
+  },
+  {
+    "chapter": "web/10_IDENTITY_SECURITY.md",
+    "title": "Security: identity, authority và trust boundaries",
+    "level": "UNVERIFIED",
+    "claim": "Authenticated không vượt resource/field scope. Side effects chỉ sau authority và intent defenses. Credentials không vào persistent logs/client bundles. Trust được verify tại boundary, không tin client role. Security controls không được disable để hết error; cache key/policy phải giữ principal isolation.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "web/11_INTEGRATION_FLOW.md",
+    "title": "Integration: wire meaning, intent và state owners",
+    "level": "MODEL",
+    "claim": "Rollback chỉ thuộc version đang sở hữu optimistic state trong host fixture.",
+    "evidence": "evidence/host-models/web.log",
+    "command": "node examples/web_models.mjs",
+    "observed": "PASS rollback ownership",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "embedded_systems/01_C_REPRESENTATION.md",
+    "title": "C17: object, expression, pointer và linkage",
+    "level": "UNVERIFIED",
+    "claim": "Live+bounds+alignment+allowed type cùng đúng; arithmetic defined, callback signature/context hợp; string terminator trong capacity, output chỉ đọc khi success; serialization explicit width/endian, concurrency separate protocol.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/02_MEMORY_BUILD.md",
+    "title": "Memory: storage, layout và lifetime",
+    "level": "UNVERIFIED",
+    "claim": "Live+bounds+alignment+allowed type access; regions không overlap, linker/startup match, worst stack/nesting nằm budget; allocation fail/full có outcome. Owner release không double-free, views không dangling.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/11_BUILD_LINK_STARTUP.md",
+    "title": "Build/link: source tới ELF và flash",
+    "level": "UNVERIFIED",
+    "claim": "Symbols resolved compatible ABI/signatures; vector/startup/linker target match; regions không overlap, exact image/symbolization; build success không hardware proof.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/04_CPU_MCU_EXECUTION.md",
+    "title": "CPU execution: instructions, calls và ABI",
+    "level": "UNVERIFIED",
+    "claim": "Instruction fetch executable region, SP alignment/bounds, preserved registers/calling contract, valid load/store addresses. Atomic aligned scalar access target guarantee không whole RMW/multi-field snapshot. C arithmetic defined độc lập CPU bits.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/03_CPP_OWNERSHIP.md",
+    "title": "C++ embedded: objects, RAII và chi phí",
+    "level": "UNVERIFIED",
+    "claim": "Owner release đúng một lần, views không vượt lifetime/reallocation; constructor establishes valid state; copy/move/destructor giữ resource semantics. Worst-path code/allocation/locks có budget, exception/RTTI ABI flags khớp libraries.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/13_MMIO_MCU.md",
+    "title": "MCU và memory-mapped I/O",
+    "level": "UNVERIFIED",
+    "claim": "Address/width/region accessible target, clock/reset/config valid trước active, write semantics đúng, unrelated pending events không mất, one configuration owner. Reserved bits theo manual không assume always write0.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/12_CORTEX_M.md",
+    "title": "Cortex-M4: reset, exceptions và protection",
+    "level": "UNVERIFIED",
+    "claim": "Vector đúng image/handler, initial MSP aligned in SRAM budget, Thumb/code addresses hợp target, startup initializes objects trước use. Priority encoding theo implemented bits; fault decode core đúng và stacked context valid. Guard invalid stack before dereference fault dump.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/05_PERIPHERAL_STATE_MACHINES.md",
+    "title": "GPIO, timer và PWM: hardware state machines",
+    "level": "UNVERIFIED",
+    "claim": "Pin ratings/mux/pulls hợp physical circuit; timer clock/rate tính đúng; output waveform period/duty đáp yêu cầu; config update không glitch vượt permitted policy; acknowledge đúng events và capacity/service latency bounded.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/14_SERIAL_BUSES.md",
+    "title": "UART, SPI và I2C: wire/state/service flow",
+    "level": "UNVERIFIED",
+    "claim": "Electrical levels/pulls/clock/framing agreement; no buffer overrun ngoài explicit loss policy; CS/START-STOP transaction boundaries đúng; only completed data publish. Retry I2C write có thể duplicate device command nếu outcome unknown, protocol ack không universal business idempotence.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/15_ADC_CAN.md",
+    "title": "ADC và CAN: sampling, arbitration và error states",
+    "level": "UNVERIFIED",
+    "claim": "Analog input within permitted range, acquisition settling/channel/timebase correct, raw generation complete trước consume, unit conversion/calibration defined. CAN bit timing/transceiver/termination configured, queues/errors bounded, lost arbitration treated normal, bus-off observable with safe recovery.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/06_INTERRUPTS.md",
+    "title": "Interrupts: event, preemption và coherent state",
+    "level": "UNVERIFIED",
+    "claim": "Atomic access chỉ nói thao tác không bị quan sát như phần bị xé theo guarantee target; read-modify-write hoặc pair snapshot là invariant khác. Volatile counter++ thường load/add/store: ISR cập nhật giữa load và store có thể mất increment. Hai aligned scalar reads vẫn có thể lấy x mới/y cũ. Critical snapshot, atomic protocol hoặc versioned scheme đúng memory semantics mới bảo vệ; không chọn lock-free bằng niềm tin “MCU 32 bit”. [GCC volatile](https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html).",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/07_DMA_OWNERSHIP.md",
+    "title": "DMA: independent bus actor và ownership handoff",
+    "level": "MODEL",
+    "claim": "Python handoff giữ reference tới buffer mutable, khác immutable snapshot; không mô phỏng cache/DMA hardware.",
+    "evidence": "evidence/host-models/systems.log",
+    "command": "python examples/systems_models.py",
+    "observed": "PASS queued buffer reference vs immutable snapshot",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "embedded_systems/08_CONCURRENCY_BUFFERS.md",
+    "title": "Embedded concurrency: CPU, ISR, DMA và tasks",
+    "level": "MODEL",
+    "claim": "Queue bounded chứa hai item và ghi nhận item thứ ba bị drop theo policy trong model.",
+    "evidence": "evidence/host-models/systems.log",
+    "command": "python examples/systems_models.py",
+    "observed": "PASS bounded queue with visible drop policy",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "embedded_systems/09_RTOS_SCHEDULER.md",
+    "title": "RTOS scheduler: task states và context switch",
+    "level": "UNVERIFIED",
+    "claim": "Every wait có producer/release reachable; all protected accesses use same lock; lock order no circular wait; full/timeout/drop outcomes handled. Critical sections bounded; correct ISR API/context/priority threshold. Ready≠deadline guarantee; stack depth units FreeRTOS StackType_t vs bytes API khác, watermarks observed only.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "embedded_systems/16_REAL_TIME.md",
+    "title": "Real-time: deadline, response time và interference",
+    "level": "MODEL",
+    "claim": "Modulo elapsed model giữ timeout qua rollover với bound không mất nguyên chu kỳ; không phải native C tick.",
+    "evidence": "evidence/host-models/systems.log",
+    "command": "python examples/systems_models.py",
+    "observed": "PASS tick rollover model with explicit bounded interval",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "os/01_KERNEL_PROCESS.md",
+    "title": "OS foundation: hardware, kernel, userspace và threads",
+    "level": "UNVERIFIED",
+    "claim": "User pointers validated/access permissions enforced, thread resumes correct context, shared state follows protocol, acquired kernel resources released appropriate owner. Runnable doesn't guarantee deadline; scheduler fairness/policy not hard-real-time proof.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "os/02_VIRTUAL_MEMORY.md",
+    "title": "Virtual memory: pages, faults, heap và mappings",
+    "level": "UNVERIFIED",
+    "claim": "Access permitted mapped region and live object, mapping/offset bounds đúng; process virtual pointer not transferable như physical address to DMA/device. Backing lifecycle/sharing aware, allocator live-byte counts and RSS interpreted separately. Page-fault handler success not pointer semantics proof.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "os/03_IO_IPC_LIFETIME.md",
+    "title": "I/O, IPC và resource acquire-use-release",
+    "level": "MODEL",
+    "claim": "Python context manager đóng file trong success/exception path; không đo Linux FD hoặc kernel lifetime.",
+    "evidence": "evidence/host-models/systems.log",
+    "command": "python examples/systems_models.py",
+    "observed": "PASS file lifecycle success and exception path (host, not Linux FD count)",
+    "limit": "Chỉ invariant nêu trên trong host fixture; không xác minh toàn bài, MCU/native C/C++, framework hoặc production target."
+  },
+  {
+    "chapter": "os/04_CONCURRENCY.md",
+    "title": "OS concurrency: happens-before, waits và progress",
+    "level": "UNVERIFIED",
+    "claim": "Every protected access same protocol; predicate checked under lock after every wake; no circular wait; producer/release able to run; atomics publication ordered and storage live; queue/cancel/full bounded. Lock process-local not multi-process/database replicas unless designed interprocess primitive.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "debug/01_EVIDENCE_METHOD.md",
+    "title": "Scientific debugging: chứng minh cơ chế phá invariant",
+    "level": "UNVERIFIED",
+    "claim": "Original trigger fail bản lỗi, same fixture pass fix với expected property độc lập implementation. One experiment isolates variable hoặc ghi confounds; negative/boundary/error/cancel/reversed order giữ invariant. Không claim tests/source/target run nếu tool không thật executed.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "debug/02_WEB_OBSERVABILITY.md",
+    "title": "Debug Web: evidence từ browser tới database",
+    "level": "UNVERIFIED",
+    "claim": "Same fixture/build/config comparison, telemetry supports claimed layer only; no inference of DBcommit from clienttimeout/status alone. Logs retain stable correlation and outcome with redaction. Unobserved spans not prove no handler if sampling/logging disabled.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  },
+  {
+    "chapter": "debug/03_SYSTEMS_OBSERVABILITY.md",
+    "title": "Debug C/C++/Embedded: source, CPU, wire và scheduler",
+    "level": "UNVERIFIED",
+    "claim": "Symbols match image/core, frame validated before decode, measurement layer matches claim, instrumentation overhead/loss documented, synthetic scope. Sanitizer pass only paths executed; stack watermark observed not maximum proof; waveform correct doesn't prove buffer ownership.",
+    "evidence": null,
+    "command": null,
+    "observed": null,
+    "limit": "Source/pseudocode review only; no topic-specific executable record. Demo remains BLOCKED."
+  }
+]

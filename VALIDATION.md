@@ -1,5 +1,13 @@
 # Validation — mở rộng giáo trình ngày 2026-10-06
 
+## Trạng thái bằng chứng hiện hành
+
+Các mục lịch sử phía dưới giữ nguyên văn bản và kết quả từng đợt. Câu PASS không kèm raw execution record trong repository được coi là **UNVERIFIED đối với khả năng tái kiểm chứng**, không phải chứng nhận hiện tại. [Audit claims](audit/UNSUPPORTED_CLAIMS.md) liệt kê những chỗ đó. Không phủ nhận các lần chạy cũ; không sử dụng chúng thay log mới.
+
+Các execution record hiện tại: [host models](evidence/host-models/summary.json), [React](evidence/react-race/summary.json), [MongoDB](evidence/mongo-api/summary.json) và [documentation checker](evidence/documentation-checks.json). Dùng [claim matrix](THEORY_COVERAGE_MATRIX.md#claim--evidence--mức-độ) để biết chính xác claim và giới hạn. Docker Compose/CI chỉ được gọi PASS khi có record của chính môi trường đó.
+
+Chạy toàn bộ bằng `python scripts/run_all.py --mongod <absolute-path-to-mongod>`; Git Bash/Linux có wrapper `bash run_all.sh --mongod <path>`. Thiếu dependency/test lỗi trả nonzero; không truyền MongoDB executable thì ghi BLOCKED và exit 2. Phase 1 vẫn SKIPPED theo yêu cầu, không âm thầm gọi C/C++ PASS.
+
 ## Cập nhật Phase 2 — 2026-10-06
 
 Phase 1 được **SKIPPED theo yêu cầu trực tiếp của người dùng**; không coi các tiêu chí compiler/sanitizer của phase đó đã đạt. [Trạng thái](audit/PHASE_STATUS.md) ghi phạm vi và phần còn chặn.
@@ -11,7 +19,7 @@ Phase 1 được **SKIPPED theo yêu cầu trực tiếp của người dùng**;
 
 [Bản ghi thực thi](evidence/react-race/summary.json) có timestamp UTC, Python và toàn bộ lệnh/exit codes. [Node](evidence/react-race/node-version.log), [npm](evidence/react-race/npm-version.log) và [dependency versions](evidence/react-race/package-versions.log) ghi phiên bản thật. Runner trả exit 0 chỉ khi đúng test regression thất bại và cả hai test bản sửa thành công. Cài dependency bằng `npm ci`; [hướng dẫn](examples/react-race/README.md) mô tả chạy lại và giới hạn.
 
-Backend ASP.NET Core/MongoDB **BLOCKED**: chưa tìm được Docker/Podman/mongod trong môi trường hiện tại. Chưa chạy conditional update, unique-index concurrency hay replay bằng MongoDB. C# process-local models vẫn là MODEL; không dùng kết quả React để tuyên bố hoàn tất Phase 2. Theo prompt, Phases 3–5 còn chờ Phase 2.
+Backend từng BLOCKED vì không có Docker/Podman/mongod trên PATH. Cập nhật: đã tải MongoDB Community 8.0.15 vào Tool workspace và chạy ASP.NET Core 8/driver 3.5.0 với DB tạm. Conditional update, unique index và idempotent replay đều PASS 20/20 rounds qua HTTP. Bản lỗi forced-read trả hai purchase success cho stock1. [Raw log](evidence/mongo-api/verification.log), [command/date/scope](evidence/mongo-api/summary.json), [versions](evidence/mongo-api/mongodb-version.log), [build](evidence/mongo-api/build.log). Native standalone evidence không thay Docker Compose, replica set, write concern hay multiple-instance evidence. C# host models vẫn là MODEL.
 
 ## Phase theory-first hiện tại — 2026-10-06
 

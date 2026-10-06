@@ -1,0 +1,6 @@
+PASS forced check-then-act failure
+PASS conditional single-item purchase
+PASS idempotency concurrent replay
+PASS same key different payload rejected
+PASS checked arithmetic boundary (C# not C UB)
+PASS propagated cancellation

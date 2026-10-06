@@ -1,0 +1,5 @@
+PASS queued buffer reference vs immutable snapshot
+PASS bounded queue with visible drop policy
+PASS tick rollover model with explicit bounded interval
+PASS file lifecycle success and exception path (host, not Linux FD count)
+PASS retained payload bound; not a total-RSS leak benchmark

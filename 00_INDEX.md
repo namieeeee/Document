@@ -1,5 +1,7 @@
 # Giáo trình kỹ thuật: theory trước lab
 
+Hồ sơ hiện tại: [phase status](audit/PHASE_STATUS.md) · [review checklist](REVIEW_CHECKLIST.md) · [self-review](audit/SELF_REVIEW.md) · [39 outline nội dung](content/README.md) · [archive overview cũ](archive/README.md) · [MongoDB fixture](examples/MongoApi/README.md) · [báo cáo hoàn thiện](audit/COMPLETION_REPORT.md).
+
 [README của repository](README.md).
 
 Bộ tự học tiếng Việt về Web/FE/BE, Embedded/Systems, OS/RTOS và debugging. Bản theory-first ngày 2026-10-06 đi theo dependency: nền → cơ chế → representation/flow → lifetime/state → invariant → failure/evidence → lab. Đọc [coverage before/after](THEORY_COVERAGE_MATRIX.md) để biết phạm vi và giới hạn; không dùng số file làm bằng chứng đã học xong.

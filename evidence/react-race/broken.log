@@ -1,9 +1,9 @@
 
  RUN  v5.0.3 C:/Users/Trann/Work_Space/Document_Code/knowledge_base/examples/react-race
 
- × race.test.js > keeps latest result when B completes before stale A 39ms
+ × race.test.js > keeps latest result when B completes before stale A 38ms
    → expected 'A' to be 'B' // Object.is equality
- ✓ race.test.js > publishes B when responses complete in request order 4ms
+ ✓ race.test.js > publishes B when responses complete in request order 6ms
 
 ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
 
@@ -26,7 +26,7 @@ Received: "A"
 
  Test Files  1 failed (1)
       Tests  1 failed | 1 passed (2)
-   Start at  10:28:32
-   Duration  27.32s (environment 81%, import 18%)
+   Start at  10:48:33
+   Duration  13.54s (environment 86%, import 13%)
 
 JSON report written to C:/Users/Trann/Work_Space/Document_Code/knowledge_base/evidence/react-race/broken.json

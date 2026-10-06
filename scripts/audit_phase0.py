@@ -110,7 +110,8 @@ claims = []
 for p, s in texts.items():
     for n, line in enumerate(s.splitlines(), 1):
         if re.search(r'đã kiểm chứng|validated|\bPASS\b', line, re.I):
-            claims.append((p, n, line.replace('|', '\\|')))
+            # Quoted source text is literal, not an audit-relative live link.
+            claims.append((p, n, line.replace('|', '\\|').replace('[', '&#91;').replace(']', '&#93;')))
 def claim_status(p, n, line):
     reports = {'EXPANSION_REPORT.md', 'THEORY_COMPLETION_REPORT.md', 'VALIDATION.md'}
     if p in reports and re.search(r'\bPASS\b|Đã chạy|chạy trực tiếp DLL đã thành công', line):

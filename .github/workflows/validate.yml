@@ -1,0 +1,45 @@
+name: Validate curriculum
+on: [push, pull_request]
+jobs:
+  documentation-and-react:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python scripts/check_links.py --report evidence/ci-links.json
+      - run: npm ci
+        working-directory: examples/react-race
+      - run: python verify.py
+        working-directory: examples/react-race
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: documentation-and-react-evidence
+          path: evidence/
+  mongodb:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: docker compose up --build --wait
+        working-directory: examples/MongoApi
+      - run: python verify.py --external
+        working-directory: examples/MongoApi
+      - run: docker compose logs > ../../evidence/mongo-compose.log
+        if: always()
+        working-directory: examples/MongoApi
+      - run: docker compose down
+        if: always()
+        working-directory: examples/MongoApi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mongodb-evidence
+          path: evidence/
